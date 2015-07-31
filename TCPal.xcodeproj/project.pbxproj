@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902091B680EE2000C87BC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902081B680EE2000C87BC /* FirstViewController.swift */; };
 		B139020B1B680EE2000C87BC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139020A1B680EE2000C87BC /* SecondViewController.swift */; };
@@ -15,6 +16,8 @@
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
 		B139021E1B680EE3000C87BC /* TCPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139021D1B680EE3000C87BC /* TCPalTests.swift */; };
 		B13902291B680EE3000C87BC /* TCPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902281B680EE3000C87BC /* TCPalUITests.swift */; };
+		B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */; };
+		B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.debug.xcconfig"; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B13902081B680EE2000C87BC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,10 @@
 		B13902241B680EE3000C87BC /* TCPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902281B680EE3000C87BC /* TCPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPalUITests.swift; sourceTree = "<group>"; };
 		B139022A1B680EE3000C87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCPal-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C036350B5CD90532E80FD71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9F02CE6BF4DD0978D64E1A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */,
+				B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B13901FA1B680EE2000C87BC = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,8 @@
 				B139021C1B680EE3000C87BC /* TCPalTests */,
 				B13902271B680EE3000C87BC /* TCPalUITests */,
 				B13902041B680EE2000C87BC /* Products */,
+				A9F02CE6BF4DD0978D64E1A4 /* Pods */,
+				7C036350B5CD90532E80FD71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +129,15 @@
 			isa = PBXGroup;
 			children = (
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
+				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
 				B13902081B680EE2000C87BC /* FirstViewController.swift */,
 				B139020A1B680EE2000C87BC /* SecondViewController.swift */,
 				B139020C1B680EE2000C87BC /* Main.storyboard */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
 				B13902141B680EE2000C87BC /* Info.plist */,
+				B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */,
+				B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */,
 			);
 			path = TCPal;
 			sourceTree = "<group>";
@@ -135,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B139022D1B680EE3000C87BC /* Build configuration list for PBXNativeTarget "TCPal" */;
 			buildPhases = (
+				715302458B23578D2648522C /* Check Pods Manifest.lock */,
 				B13901FF1B680EE2000C87BC /* Sources */,
 				B13902001B680EE2000C87BC /* Frameworks */,
 				B13902011B680EE2000C87BC /* Resources */,
+				C9AC5C6ADA465CC90C03F329 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +224,7 @@
 		B13901FB1B680EE2000C87BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Janardan Yri";
 				TargetAttributes = {
@@ -232,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */,
+				B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
 				B139020E1B680EE2000C87BC /* Main.storyboard in Resources */,
 			);
@@ -253,11 +289,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		715302458B23578D2648522C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9AC5C6ADA465CC90C03F329 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCPal/Pods-TCPal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B13901FF1B680EE2000C87BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
 				B139020B1B680EE2000C87BC /* SecondViewController.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
 				B13902091B680EE2000C87BC /* FirstViewController.swift in Sources */,
@@ -398,23 +468,30 @@
 		};
 		B139022E1B680EE3000C87BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TCPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.janardanyri.TCPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TCPal/TCPal-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B139022F1B680EE3000C87BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TCPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.janardanyri.TCPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TCPal/TCPal-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -485,6 +562,7 @@
 				B139022F1B680EE3000C87BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B13902301B680EE3000C87BC /* Build configuration list for PBXNativeTarget "TCPalTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +571,7 @@
 				B13902321B680EE3000C87BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B13902331B680EE3000C87BC /* Build configuration list for PBXNativeTarget "TCPalUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +580,7 @@
 				B13902351B680EE3000C87BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
