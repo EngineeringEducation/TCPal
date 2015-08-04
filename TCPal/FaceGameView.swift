@@ -41,7 +41,9 @@ class FaceGameView: UIView {
   lazy var buttons : [UIButton] = {
     return (0...1).map { index in
       let button = UIButton()
-      button.setTitleColor(UIColor.blackColor(), forState:.Normal)
+      button.backgroundColor = UIColor(red: 0.4, green: 0.8, blue: 1, alpha: 1)
+      button.clipsToBounds = true
+      button.layer.cornerRadius = 20
       return button
     }
     }()
@@ -68,15 +70,28 @@ class FaceGameView: UIView {
     }
 
     for i in 0..<self.buttons.count {
+      // We want these to pin to the bottom, and all shrink vertically if necessary to fit beneath the label.
+
       self.buttons[i].snp_updateConstraints { (make) -> Void in
         if i == 0 {
-          make.top.equalTo(self.confirmationLabel.snp_bottom).offset(20)
+          // Topmost button
+          make.top.greaterThanOrEqualTo(self.confirmationLabel.snp_bottom).offset(20)
         } else {
+          // Non-topmost button
           make.top.equalTo(self.buttons[i-1].snp_bottom).offset(20)
+          make.height.equalTo(self.buttons[0])
+        }
+
+        if i == self.buttons.count - 1 {
+          // Bottommost button
+          // FIXME: This will break when bottomLayoutGuide comes into the picture
+          make.bottom.equalTo(self).offset(-20)
         }
 
         make.centerX.equalTo(0)
         make.leading.equalTo(20)
+        make.height.greaterThanOrEqualTo(44)
+        make.height.equalTo(60).priority(800)
       }
     }
 
