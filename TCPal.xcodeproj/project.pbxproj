@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */; };
 		B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */; };
+		B1183B1D1B71480200A21C4D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1C1B71480200A21C4D /* Person.swift */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
@@ -39,6 +40,7 @@
 		3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.debug.xcconfig"; sourceTree = "<group>"; };
 		B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameViewController.swift; sourceTree = "<group>"; };
+		B1183B1C1B71480200A21C4D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
+				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
 				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
@@ -322,6 +325,7 @@
 			files = (
 				B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */,
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
+				B1183B1D1B71480200A21C4D /* Person.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
