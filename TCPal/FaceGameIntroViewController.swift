@@ -55,6 +55,7 @@ class FaceGameIntroViewController: UIViewController {
 			if let _ = error {
 				// TODO: error messages?
 				let alert = UIAlertController(title: "A porblem!", message: nil, preferredStyle: .Alert)
+				alert.addAction(UIAlertAction(title: "Oh no!", style: .Cancel, handler: nil))
 				self.presentViewController(alert, animated: true, completion: nil)
 				self.showStatusView(self.retryButton)
 			} else if let persons = persons {
@@ -107,17 +108,38 @@ class FaceGameIntroViewController: UIViewController {
 		}
 	}
 
+	enum PersonJSONError : ErrorType {
+		case MalformedInput
+	}
 
 	static func personsFromJSON(JSON: String) throws -> [Person] {
-		// TODO: Will all these assertions feed into swift 2 error handling?
-		let personDictionaries = try NSJSONSerialization.JSONObjectWithData(JSON.dataUsingEncoding(NSUTF8StringEncoding)!, options: NSJSONReadingOptions(rawValue:0)) as! [[String : String]]
 
-		return personDictionaries.map {
-			return Person(
-				name: $0["name"]!,
-				faceURL: NSURL(string: $0["face"]!)!
-			)
+		guard let JSONData = JSON.dataUsingEncoding(NSUTF8StringEncoding) else {
+			throw PersonJSONError.MalformedInput
 		}
+
+		let JSONObject = try NSJSONSerialization.JSONObjectWithData(JSONData, options: NSJSONReadingOptions(rawValue:0))
+
+		guard let personDicts = JSONObject as? [[String : String]] else {
+			throw PersonJSONError.MalformedInput
+		}
+
+		var persons = [Person]()
+
+		for personDict in personDicts {
+			guard let name = personDict["name"], faceString = personDict["face"], faceURL = NSURL(string: faceString) else {
+				throw PersonJSONError.MalformedInput
+			}
+
+			let person = Person(
+				name: name,
+				faceURL: faceURL
+			)
+			
+			persons.append(person)
+		}
+
+		return persons
 	}
 
 }
