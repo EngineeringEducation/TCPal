@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FaceGameIntroViewController" customModule="TCPal" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingLabel" destination="U6c-E6-AZH" id="MDV-lh-iiq"/>
+                <outlet property="playButton" destination="aFp-pg-OxK" id="bQO-0P-KE2"/>
+                <outlet property="retryButton" destination="fv8-V2-Mzb" id="bTn-gZ-3P8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="statusViews" destination="fv8-V2-Mzb" collectionClass="NSMutableArray" id="kMI-J0-2h3"/>
+                <outletCollection property="statusViews" destination="U6c-E6-AZH" collectionClass="NSMutableArray" id="s1V-C4-yBo"/>
+                <outletCollection property="statusViews" destination="aFp-pg-OxK" collectionClass="NSMutableArray" id="icB-0D-xxp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oh hi. wanna play the face game?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-0p-kgO">
+                    <rect key="frame" x="173" y="114" width="254" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv8-V2-Mzb">
+                    <rect key="frame" x="250" y="492" width="100" height="30"/>
+                    <state key="normal" title="retry loading :("/>
+                    <connections>
+                        <action selector="didTapRetry:" destination="-1" eventType="touchUpInside" id="3MQ-PT-THE"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-E6-AZH">
+                    <rect key="frame" x="265" y="496" width="70" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFp-pg-OxK">
+                    <rect key="frame" x="265" y="492" width="70" height="30"/>
+                    <state key="normal" title="Let's Play!"/>
+                    <connections>
+                        <action selector="didTapPlay:" destination="-1" eventType="touchUpInside" id="LZL-gW-JAg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="U6c-E6-AZH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jvu-9x-2vm"/>
+                <constraint firstAttribute="bottom" secondItem="fv8-V2-Mzb" secondAttribute="bottom" constant="78" id="Lmr-TR-dzO"/>
+                <constraint firstItem="fv8-V2-Mzb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NAz-vX-Qqf"/>
+                <constraint firstItem="U6c-E6-AZH" firstAttribute="baseline" secondItem="fv8-V2-Mzb" secondAttribute="baseline" id="S3T-Nw-dqI"/>
+                <constraint firstItem="aFp-pg-OxK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZTi-QJ-Sqz"/>
+                <constraint firstItem="aFp-pg-OxK" firstAttribute="baseline" secondItem="fv8-V2-Mzb" secondAttribute="baseline" id="gXA-Oo-UYt"/>
+                <constraint firstItem="D7g-0p-kgO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gdK-Yt-Q49"/>
+                <constraint firstItem="D7g-0p-kgO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="lfh-wi-ZSV"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

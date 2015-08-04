@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Standard programmatic interface setup
 		self.window = UIWindow()
 		self.window!.rootViewController = LoginViewController() {
-			self.window!.rootViewController = FaceGameViewController()
+			self.window!.rootViewController = FaceGameIntroViewController()
 		}
 		self.window!.makeKeyAndVisible()
 

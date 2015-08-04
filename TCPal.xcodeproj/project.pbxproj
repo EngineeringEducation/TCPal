@@ -11,6 +11,9 @@
 		B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */; };
 		B1183B1D1B71480200A21C4D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1C1B71480200A21C4D /* Person.swift */; };
 		B1183B1F1B71580200A21C4D /* FaceGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1E1B71580200A21C4D /* FaceGameView.swift */; };
+		B1183B231B7164D500A21C4D /* facegame-persons-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = B1183B221B7164D500A21C4D /* facegame-persons-sample.json */; };
+		B1183B281B71666C00A21C4D /* FaceGameIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */; };
+		B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
@@ -43,6 +46,9 @@
 		B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameViewController.swift; sourceTree = "<group>"; };
 		B1183B1C1B71480200A21C4D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B1183B1E1B71580200A21C4D /* FaceGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameView.swift; sourceTree = "<group>"; };
+		B1183B221B7164D500A21C4D /* facegame-persons-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "facegame-persons-sample.json"; sourceTree = "<group>"; };
+		B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameIntroViewController.swift; sourceTree = "<group>"; };
+		B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceGameIntroViewController.xib; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,15 +135,18 @@
 			isa = PBXGroup;
 			children = (
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
-				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
+				B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */,
+				B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */,
 				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
 				B1183B1E1B71580200A21C4D /* FaceGameView.swift */,
+				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
 				B13902141B680EE2000C87BC /* Info.plist */,
 				B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */,
 				B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */,
+				B1183B221B7164D500A21C4D /* facegame-persons-sample.json */,
 			);
 			path = TCPal;
 			sourceTree = "<group>";
@@ -269,7 +278,9 @@
 			files = (
 				B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */,
 				B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */,
+				B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
+				B1183B231B7164D500A21C4D /* facegame-persons-sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +357,7 @@
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
 				B1183B1D1B71480200A21C4D /* Person.swift in Sources */,
 				B1183B1F1B71580200A21C4D /* FaceGameView.swift in Sources */,
+				B1183B281B71666C00A21C4D /* FaceGameIntroViewController.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

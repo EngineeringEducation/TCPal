@@ -11,12 +11,18 @@ import UIKit
 
 class FaceGameViewController: UIViewController {
 
-	// MARK: - Model
+	init(persons: [Person]) {
+		self.persons = persons
 
-	var persons = [
-		Person(name: "Bill Murray", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bill_Murray%2C_Monuments_Men_premiere.jpg")!),
-		Person(name: "Stephen Hawking", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg")!)
-	]
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
+
+	// MARK: - Model
+	let persons : [Person]
 
 	// MARK: - "View Model"-ish
 
@@ -51,34 +57,10 @@ class FaceGameViewController: UIViewController {
 			button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
 		}
 
-		self.loadFaces()
+		self.throwUpNewPerson()
 	}
 
 	// MARK: - Happenin' Stuff
-
-	func loadFaces() {
-
-		var extantCount = self.persons.count
-		var failed = false
-
-		for person in self.persons {
-
-			person.getFace({ (success) -> Void in
-				if (!success) {
-					failed = true
-					print("failed :(")
-				}
-
-				if (--extantCount == 0) {
-					if (failed == false) {
-						self.throwUpNewPerson()
-					} else {
-						// FIXME: Do something when we've completed with partial success
-					}
-				}
-			})
-		}
-	}
 
 	func throwUpNewPerson() {
 		let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))

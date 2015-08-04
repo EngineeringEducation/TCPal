@@ -34,5 +34,4 @@ class Person {
 
 		task.resume()
 	}
-
 }
