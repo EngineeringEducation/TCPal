@@ -60,10 +60,17 @@ class FaceGameView: UIView {
       make.width.equalTo(200)
     }
 
+    self.confirmationLabel.snp_updateConstraints { (make) -> Void in
+      make.top.equalTo(self.faceView.snp_bottom).offset(20)
+      make.centerX.equalTo(0)
+      make.height.equalTo(50)
+      // Width will auto-flex
+    }
+
     for i in 0..<self.buttons.count {
       self.buttons[i].snp_updateConstraints { (make) -> Void in
         if i == 0 {
-          make.top.equalTo(self.faceView.snp_bottom).offset(50)
+          make.top.equalTo(self.confirmationLabel.snp_bottom).offset(20)
         } else {
           make.top.equalTo(self.buttons[i-1].snp_bottom).offset(20)
         }
