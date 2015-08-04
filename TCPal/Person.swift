@@ -7,32 +7,32 @@
 //
 
 class Person {
-  var face : UIImage?
-  let faceURL : NSURL
-  let name : String
+	var face : UIImage?
+	let faceURL : NSURL
+	let name : String
 
-  init(name: String, faceURL: NSURL) {
-    self.faceURL = faceURL
-    self.name = name
-  }
+	init(name: String, faceURL: NSURL) {
+		self.faceURL = faceURL
+		self.name = name
+	}
 
-  func getFace(completion: (success: Bool) -> Void) {
-    let session = NSURLSession.sharedSession()
-    let task = session.dataTaskWithURL(self.faceURL) { (imageData, response, error) -> Void in
-      NSOperationQueue.mainQueue().addOperationWithBlock {
-        if let error = error {
-          print("Network error: \(error)")
-          completion(success:false)
-        } else if let imageData = imageData, image = UIImage(data: imageData) {
-          self.face = image
-          completion(success:true)
-        } else {
-          completion(success:false)
-        }
-      }
-    }
+	func getFace(completion: (success: Bool) -> Void) {
+		let session = NSURLSession.sharedSession()
+		let task = session.dataTaskWithURL(self.faceURL) { (imageData, response, error) -> Void in
+			NSOperationQueue.mainQueue().addOperationWithBlock {
+				if let error = error {
+					print("Network error: \(error)")
+					completion(success:false)
+				} else if let imageData = imageData, image = UIImage(data: imageData) {
+					self.face = image
+					completion(success:true)
+				} else {
+					completion(success:false)
+				}
+			}
+		}
 
-    task.resume()
-  }
+		task.resume()
+	}
 
 }

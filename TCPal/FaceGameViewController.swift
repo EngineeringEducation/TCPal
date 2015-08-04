@@ -11,89 +11,89 @@ import UIKit
 
 class FaceGameViewController: UIViewController {
 
-  // MARK: - Model
+	// MARK: - Model
 
-  var persons = [
-    Person(name: "Bill Murray", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bill_Murray%2C_Monuments_Men_premiere.jpg")!),
-    Person(name: "Stephen Hawking", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg")!)
-  ]
+	var persons = [
+		Person(name: "Bill Murray", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bill_Murray%2C_Monuments_Men_premiere.jpg")!),
+		Person(name: "Stephen Hawking", faceURL: NSURL(string: "https://upload.wikimedia.org/wikipedia/commons/e/eb/Stephen_Hawking.StarChild.jpg")!)
+	]
 
-  // MARK: - "View Model"-ish
+	// MARK: - "View Model"-ish
 
-  var currentPerson : Person! {
-    didSet {
-      self.faceGameView.faceView.image = self.currentPerson.face!
-    }
-  }
+	var currentPerson : Person! {
+		didSet {
+			self.faceGameView.faceView.image = self.currentPerson.face!
+		}
+	}
 
-  var nameChoices : [String]! {
-    didSet {
-      for i in (0..<self.faceGameView.buttons.count) {
-        self.faceGameView.buttons[i].setTitle(self.nameChoices[i], forState: .Normal)
-      }
-    }
-  }
+	var nameChoices : [String]! {
+		didSet {
+			for i in (0..<self.faceGameView.buttons.count) {
+				self.faceGameView.buttons[i].setTitle(self.nameChoices[i], forState: .Normal)
+			}
+		}
+	}
 
-  // MARK: - View
+	// MARK: - View
 
-  lazy var faceGameView = FaceGameView()
+	lazy var faceGameView = FaceGameView()
 
-  // MARK: - View Lifecycle
+	// MARK: - View Lifecycle
 
-  override func loadView() {
-    self.view = self.faceGameView
-  }
+	override func loadView() {
+		self.view = self.faceGameView
+	}
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-    for button in self.faceGameView.buttons {
-      button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
-    }
+		for button in self.faceGameView.buttons {
+			button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
+		}
 
-    self.loadFaces()
-  }
+		self.loadFaces()
+	}
 
-  // MARK: - Happenin' Stuff
+	// MARK: - Happenin' Stuff
 
-  func loadFaces() {
+	func loadFaces() {
 
-    var extantCount = self.persons.count
-    var failed = false
+		var extantCount = self.persons.count
+		var failed = false
 
-    for person in self.persons {
+		for person in self.persons {
 
-      person.getFace({ (success) -> Void in
-        if (!success) {
-          failed = true
-          print("failed :(")
-        }
+			person.getFace({ (success) -> Void in
+				if (!success) {
+					failed = true
+					print("failed :(")
+				}
 
-        if (--extantCount == 0) {
-          if (failed == false) {
-            self.throwUpNewPerson()
-          } else {
-            // FIXME: Do something when we've completed with partial success
-          }
-        }
-      })
-    }
-  }
+				if (--extantCount == 0) {
+					if (failed == false) {
+						self.throwUpNewPerson()
+					} else {
+						// FIXME: Do something when we've completed with partial success
+					}
+				}
+			})
+		}
+	}
 
-  func throwUpNewPerson() {
-    let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))
-    self.currentPerson = self.persons[randomIndex]
+	func throwUpNewPerson() {
+		let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))
+		self.currentPerson = self.persons[randomIndex]
 
-    // FIXME: randomize these
-    self.nameChoices = self.persons.map { person in
-      return person.name
-    }
-  }
+		// FIXME: randomize these
+		self.nameChoices = self.persons.map { person in
+			return person.name
+		}
+	}
 
-  func didTapNameButton(sender : UIButton) {
-    let buttonIndex = self.faceGameView.buttons.indexOf(sender)!
-    let selectedName = self.nameChoices[buttonIndex]
-    self.faceGameView.confirmationLabel.text = (selectedName == self.currentPerson.name) ? "Y" : "N"
-    self.throwUpNewPerson()
-  }
+	func didTapNameButton(sender : UIButton) {
+		let buttonIndex = self.faceGameView.buttons.indexOf(sender)!
+		let selectedName = self.nameChoices[buttonIndex]
+		self.faceGameView.confirmationLabel.text = (selectedName == self.currentPerson.name) ? "Y" : "N"
+		self.throwUpNewPerson()
+	}
 }
