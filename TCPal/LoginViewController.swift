@@ -52,8 +52,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    GIDSignIn.sharedInstance().delegate = self
-    GIDSignIn.sharedInstance().signInSilently()
+    let gSignIn = GIDSignIn.sharedInstance()
+    gSignIn.allowsSignInWithWebView = false // Apparently this is necessary because we aren't using uidelegate, even though we don't care.
+    gSignIn.delegate = self
+    gSignIn.signInSilently()
   }
 
   override func viewDidAppear(animated: Bool) {
