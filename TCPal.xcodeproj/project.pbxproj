@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */; };
+		B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
-		B13902091B680EE2000C87BC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902081B680EE2000C87BC /* FirstViewController.swift */; };
-		B139020B1B680EE2000C87BC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139020A1B680EE2000C87BC /* SecondViewController.swift */; };
-		B139020E1B680EE2000C87BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B139020C1B680EE2000C87BC /* Main.storyboard */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
 		B139021E1B680EE3000C87BC /* TCPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139021D1B680EE3000C87BC /* TCPalTests.swift */; };
@@ -40,11 +38,9 @@
 /* Begin PBXFileReference section */
 		3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.debug.xcconfig"; sourceTree = "<group>"; };
+		B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameViewController.swift; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B13902081B680EE2000C87BC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B139020A1B680EE2000C87BC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		B139020D1B680EE2000C87BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B13902121B680EE2000C87BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B13902141B680EE2000C87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,9 +126,7 @@
 			children = (
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
-				B13902081B680EE2000C87BC /* FirstViewController.swift */,
-				B139020A1B680EE2000C87BC /* SecondViewController.swift */,
-				B139020C1B680EE2000C87BC /* Main.storyboard */,
+				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
 				B13902141B680EE2000C87BC /* Info.plist */,
@@ -269,7 +263,6 @@
 				B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */,
 				B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
-				B139020E1B680EE2000C87BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */,
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
-				B139020B1B680EE2000C87BC /* SecondViewController.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
-				B13902091B680EE2000C87BC /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,14 +358,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B139020C1B680EE2000C87BC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B139020D1B680EE2000C87BC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B13902111B680EE2000C87BC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

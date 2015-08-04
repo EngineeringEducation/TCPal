@@ -11,6 +11,18 @@ import UIKit
 // TODO: Having this be the sign in delegate "works" right now because the login is the root view controller; ultimately we'll want to move it somewhere more appropriate to improve the app launch experience
 class LoginViewController: UIViewController, GIDSignInDelegate {
 
+  init(completion:(Void -> Void)) {
+    self.completion = completion
+
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+      fatalError("init(coder:) has not been implemented")
+  }
+
+  let completion : (Void -> Void)
+
   lazy var signInButton : GIDSignInButton = {
     let button = GIDSignInButton()
     button.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
@@ -23,14 +35,22 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     return spinner
   }()
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  override func loadView() {
+    self.view = {
+      let view = UIView()
+      view.backgroundColor = UIColor.whiteColor()
+      return view
+    }()
 
     self.view.addSubview(establishingStatusSpinnerView)
 
     // This button will be revealed (and the spinner hidden) if auto-signon fails.
     self.view.addSubview(self.signInButton)
     self.signInButton.hidden = true
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
     GIDSignIn.sharedInstance().delegate = self
     GIDSignIn.sharedInstance().signInSilently()
@@ -42,7 +62,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     print("view did appear")
     if (GIDSignIn.sharedInstance().currentUser != nil) {
       // This is intended to handle explicit logins.
-      self.performSegueWithIdentifier("completeLogin", sender: nil)
+      self.completion()
     }
   }
 
@@ -62,7 +82,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 
         if (self.presentedViewController == nil) {
           // This is intended to handle implicit logins.
-          self.performSegueWithIdentifier("completeLogin", sender: nil)
+          self.completion()
         }
 
       } else {
