@@ -21,9 +21,21 @@ PODS:
   - GoogleSymbolUtilities (1.0.0)
   - GoogleUtilities (1.0.1):
     - GoogleSymbolUtilities (~> 1.0)
+  - SnapKit (0.13.0)
 
 DEPENDENCIES:
   - Google/SignIn (= 1.0.7)
+  - SnapKit (from `https://github.com/SnapKit/SnapKit.git`, branch `swift-2.0`)
+
+EXTERNAL SOURCES:
+  SnapKit:
+    :branch: swift-2.0
+    :git: https://github.com/SnapKit/SnapKit.git
+
+CHECKOUT OPTIONS:
+  SnapKit:
+    :commit: 4f19419528baa3dfaca20e26fea2be410ddc79e2
+    :git: https://github.com/SnapKit/SnapKit.git
 
 SPEC CHECKSUMS:
   Google: 875f5a8ade86dd02e36586e4a54814843938c7f6
@@ -33,5 +45,6 @@ SPEC CHECKSUMS:
   GoogleSignIn: c45d8d1a873784a3283b4f47f331dc06d8a727b6
   GoogleSymbolUtilities: a7b0feed1fe667c8d5e647177938d0ecd62d6948
   GoogleUtilities: e3475cd4d45134221d2f3f3626095a1c49b62041
+  SnapKit: 69fe274c71511df89a5591c11437a8b826bfa9eb
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

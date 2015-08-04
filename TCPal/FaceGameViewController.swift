@@ -22,63 +22,34 @@ class FaceGameViewController: UIViewController {
 
   var currentPerson : Person! {
     didSet {
-      self.faceView.image = self.currentPerson.face!
+      self.faceGameView.faceView.image = self.currentPerson.face!
     }
   }
 
   var nameChoices : [String]! {
     didSet {
-      for i in (0..<self.buttons.count) {
-        self.buttons[i].setTitle(self.nameChoices[i], forState: .Normal)
+      for i in (0..<self.faceGameView.buttons.count) {
+        self.faceGameView.buttons[i].setTitle(self.nameChoices[i], forState: .Normal)
       }
     }
   }
 
-  // MARK: - Views
+  // MARK: - View
 
-  lazy var faceView : UIImageView = {
-    let imageView = UIImageView(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
-    imageView.clipsToBounds = true
-    imageView.contentMode = .ScaleAspectFill
-    imageView.layer.cornerRadius = 100
-    return imageView
-  }()
-
-  lazy var buttons : [UIButton] = {
-    return (0...1).map { index in
-      let button = UIButton(frame: CGRect(x: 50, y: 350 + 50 * index, width: 200, height: 50))
-      button.setTitleColor(UIColor.blackColor(), forState:.Normal)
-      return button
-    }
-  }()
-
-  lazy var confirmationLabel : UILabel = {
-    let label = UILabel(frame: CGRect(x: 100, y: 30, width: 300, height: 50))
-    label.textColor = UIColor.blackColor()
-    return label
-  }()
+  lazy var faceGameView = FaceGameView()
 
   // MARK: - View Lifecycle
 
   override func loadView() {
-    self.view = {
-      let view = UIView()
-      view.backgroundColor = UIColor.whiteColor()
-      return view
-    }()
-
-    self.view.addSubview(self.faceView)
-
-    for button in self.buttons {
-      button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
-      self.view.addSubview(button)
-    }
-
-    self.view.addSubview(self.confirmationLabel)
+    self.view = self.faceGameView
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    for button in self.faceGameView.buttons {
+      button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
+    }
 
     self.loadFaces()
   }
@@ -120,9 +91,9 @@ class FaceGameViewController: UIViewController {
   }
 
   func didTapNameButton(sender : UIButton) {
-    let buttonIndex = self.buttons.indexOf(sender)!
+    let buttonIndex = self.faceGameView.buttons.indexOf(sender)!
     let selectedName = self.nameChoices[buttonIndex]
-    self.confirmationLabel.text = (selectedName == self.currentPerson.name) ? "Y" : "N"
+    self.faceGameView.confirmationLabel.text = (selectedName == self.currentPerson.name) ? "Y" : "N"
     self.throwUpNewPerson()
   }
 }

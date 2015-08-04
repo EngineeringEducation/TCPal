@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */; };
+		3E747C6E1FA19032CD060825 /* Pods_TCPal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28C3E1A7B7B64267E6C6D14 /* Pods_TCPal.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */; };
 		B1183B1D1B71480200A21C4D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1C1B71480200A21C4D /* Person.swift */; };
+		B1183B1F1B71580200A21C4D /* FaceGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B1E1B71580200A21C4D /* FaceGameView.swift */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		748609A04847644AFA539435 /* Pods-TCPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.debug.xcconfig"; sourceTree = "<group>"; };
+		A28C3E1A7B7B64267E6C6D14 /* Pods_TCPal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCPal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameViewController.swift; sourceTree = "<group>"; };
 		B1183B1C1B71480200A21C4D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B1183B1E1B71580200A21C4D /* FaceGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameView.swift; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9FBEAD17A4B12C639A5569 /* libPods-TCPal.a in Frameworks */,
+				3E747C6E1FA19032CD060825 /* Pods_TCPal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +89,7 @@
 		7C036350B5CD90532E80FD71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B1F4B43DC0F2D9C9956F70A /* libPods-TCPal.a */,
+				A28C3E1A7B7B64267E6C6D14 /* Pods_TCPal.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,6 +132,7 @@
 				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
 				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
+				B1183B1E1B71580200A21C4D /* FaceGameView.swift */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
 				B13902141B680EE2000C87BC /* Info.plist */,
@@ -169,6 +172,7 @@
 				B13902001B680EE2000C87BC /* Frameworks */,
 				B13902011B680EE2000C87BC /* Resources */,
 				C9AC5C6ADA465CC90C03F329 /* Copy Pods Resources */,
+				6E46C9C4C6CF3D858A86D9B8 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -286,6 +290,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6E46C9C4C6CF3D858A86D9B8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCPal/Pods-TCPal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		715302458B23578D2648522C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,6 +345,7 @@
 				B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */,
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
 				B1183B1D1B71480200A21C4D /* Person.swift in Sources */,
+				B1183B1F1B71580200A21C4D /* FaceGameView.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
