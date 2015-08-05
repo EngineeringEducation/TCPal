@@ -11,7 +11,9 @@ import UIKit
 
 class FaceGameView: UIView {
 
-	init() {
+	init(nameOptionCount : Int) {
+		self.nameOptionCount = nameOptionCount
+
 		super.init(frame: CGRectZero)
 
 		self.backgroundColor = UIColor.whiteColor()
@@ -28,6 +30,10 @@ class FaceGameView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 
+	// MARK: - Configuration
+
+	let nameOptionCount : Int
+
 	// MARK: - Views
 
 	lazy var faceView : UIImageView = {
@@ -39,7 +45,7 @@ class FaceGameView: UIView {
 		}()
 
 	lazy var buttons : [UIButton] = {
-		return (0...1).map { index in
+		return (0..<self.nameOptionCount).map { index in
 			let button = UIButton()
 			button.backgroundColor = UIColor(red: 0.4, green: 0.8, blue: 1, alpha: 1)
 			button.clipsToBounds = true

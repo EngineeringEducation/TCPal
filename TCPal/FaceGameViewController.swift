@@ -6,13 +6,14 @@
 //  Copyright © 2015 Janardan Yri. All rights reserved.
 //
 
+import GameplayKit
 import QuartzCore
 import UIKit
 
 class FaceGameViewController: UIViewController {
 
 	init(persons: [Person]) {
-		self.persons = persons
+		self.persons = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(persons) as! [Person]
 
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -22,27 +23,38 @@ class FaceGameViewController: UIViewController {
 	}
 
 	// MARK: - Model
-	let persons : [Person]
 
-	// MARK: - "View Model"-ish
+	let persons : [Person] // This has been shuffled into the intended order of presentation.
 
-	var currentPerson : Person! {
+	lazy var distinctNames : [String] = {
+		Array(Set(self.persons.map { $0.name }))
+	}()
+
+	var correctCount = 0
+
+	var currentPersonIndex = -1 {
 		didSet {
 			self.faceGameView.faceView.image = self.currentPerson.face!
 		}
 	}
 
-	var nameChoices : [String]! {
+	var currentPerson : Person {
+		get {
+			return self.persons[self.currentPersonIndex]
+		}
+	}
+
+	var nameOptions : [String]! {
 		didSet {
-			for i in (0..<self.faceGameView.buttons.count) {
-				self.faceGameView.buttons[i].setTitle(self.nameChoices[i], forState: .Normal)
+			for i in (0..<self.faceGameView.nameOptionCount) {
+				self.faceGameView.buttons[i].setTitle(self.nameOptions[i], forState: .Normal)
 			}
 		}
 	}
 
 	// MARK: - View
 
-	lazy var faceGameView = FaceGameView()
+	lazy var faceGameView = FaceGameView(nameOptionCount: 4)
 
 	// MARK: - View Lifecycle
 
@@ -57,25 +69,52 @@ class FaceGameViewController: UIViewController {
 			button.addTarget(self, action: "didTapNameButton:", forControlEvents: .TouchUpInside)
 		}
 
-		self.throwUpNewPerson()
+		self.showNextPerson()
 	}
 
 	// MARK: - Happenin' Stuff
 
-	func throwUpNewPerson() {
-		let randomIndex = Int(arc4random_uniform(UInt32(self.persons.count)))
-		self.currentPerson = self.persons[randomIndex]
+	func showNextPerson() {
 
-		// FIXME: randomize these
-		self.nameChoices = self.persons.map { person in
-			return person.name
+		self.currentPersonIndex += 1
+
+		var randomNames = Array((GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(self.distinctNames) as! [String])[0..<self.faceGameView.nameOptionCount])
+
+		let selectedName = self.currentPerson.name
+
+		// Ensure that the correct name makes it into the random array
+		if !randomNames.contains(selectedName) {
+			randomNames[Int(arc4random_uniform(4))] = selectedName
 		}
+
+		self.nameOptions = randomNames
+	}
+
+	func conclude() {
+		let alert = UIAlertController(title: "oh my", message: "you got \(self.correctCount) out of \(self.persons.count)", preferredStyle: .Alert)
+		alert.addAction(UIAlertAction(title: "oh wow!", style: .Default, handler: { (action) -> Void in
+			// TODO: completion block / delegate for this view controller
+			self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+		}))
+
+		self.presentViewController(alert, animated: true, completion: nil)
 	}
 
 	func didTapNameButton(sender : UIButton) {
 		let buttonIndex = self.faceGameView.buttons.indexOf(sender)!
-		let selectedName = self.nameChoices[buttonIndex]
-		self.faceGameView.confirmationLabel.text = (selectedName == self.currentPerson.name) ? "Y" : "N"
-		self.throwUpNewPerson()
+		let selectedName = self.nameOptions[buttonIndex]
+
+		let correct = (selectedName == self.currentPerson.name)
+		if (correct) {
+			self.correctCount++
+		}
+
+		self.faceGameView.confirmationLabel.text = (correct) ? "Y" : "N"
+
+		if self.currentPersonIndex + 1 < self.persons.count {
+			self.showNextPerson()
+		} else {
+			self.conclude()
+		}
 	}
 }
