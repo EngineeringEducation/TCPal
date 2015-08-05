@@ -16,6 +16,7 @@
 		B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */; };
 		B1183B311B71884C00A21C4D /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B301B71884C00A21C4D /* ContactListViewController.swift */; };
 		B1183B341B71892B00A21C4D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B331B71892B00A21C4D /* TodayViewController.swift */; };
+		B1183B361B71988900A21C4D /* UtilityStagingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B351B71988900A21C4D /* UtilityStagingGround.swift */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 		B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceGameIntroViewController.xib; sourceTree = "<group>"; };
 		B1183B301B71884C00A21C4D /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		B1183B331B71892B00A21C4D /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B1183B351B71988900A21C4D /* UtilityStagingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityStagingGround.swift; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */,
 				B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */,
 				B1183B221B7164D500A21C4D /* facegame-persons-sample.json */,
+				B1183B351B71988900A21C4D /* UtilityStagingGround.swift */,
 			);
 			path = TCPal;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1183B361B71988900A21C4D /* UtilityStagingGround.swift in Sources */,
 				B1183B1B1B713A2700A21C4D /* FaceGameViewController.swift in Sources */,
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
 				B1183B1D1B71480200A21C4D /* Person.swift in Sources */,
