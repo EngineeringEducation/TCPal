@@ -10,6 +10,16 @@ import UIKit
 
 class FaceGameIntroViewController: UIViewController {
 
+	init() {
+		super.init(nibName: nil, bundle: nil)
+
+		self.tabBarItem = UITabBarItem(title: "Face Game", image: nil, selectedImage: nil)
+	}
+
+	required init?(coder aDecoder: NSCoder) {
+	    fatalError("init(coder:) has not been implemented")
+	}
+
 	// MARK: - Model
 	var persons : [Person]!
 

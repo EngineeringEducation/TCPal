@@ -14,6 +14,8 @@
 		B1183B231B7164D500A21C4D /* facegame-persons-sample.json in Resources */ = {isa = PBXBuildFile; fileRef = B1183B221B7164D500A21C4D /* facegame-persons-sample.json */; };
 		B1183B281B71666C00A21C4D /* FaceGameIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */; };
 		B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */; };
+		B1183B311B71884C00A21C4D /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B301B71884C00A21C4D /* ContactListViewController.swift */; };
+		B1183B341B71892B00A21C4D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1183B331B71892B00A21C4D /* TodayViewController.swift */; };
 		B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902061B680EE2000C87BC /* AppDelegate.swift */; };
 		B13902101B680EE2000C87BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B139020F1B680EE2000C87BC /* Assets.xcassets */; };
 		B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B13902111B680EE2000C87BC /* LaunchScreen.storyboard */; };
@@ -49,6 +51,8 @@
 		B1183B221B7164D500A21C4D /* facegame-persons-sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "facegame-persons-sample.json"; sourceTree = "<group>"; };
 		B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceGameIntroViewController.swift; sourceTree = "<group>"; };
 		B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceGameIntroViewController.xib; sourceTree = "<group>"; };
+		B1183B301B71884C00A21C4D /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		B1183B331B71892B00A21C4D /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		B13902031B680EE2000C87BC /* TCPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13902061B680EE2000C87BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B139020F1B680EE2000C87BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +113,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B1183B2E1B71881400A21C4D /* Face Game */ = {
+			isa = PBXGroup;
+			children = (
+				B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */,
+				B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */,
+				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
+				B1183B1E1B71580200A21C4D /* FaceGameView.swift */,
+			);
+			name = "Face Game";
+			sourceTree = "<group>";
+		};
+		B1183B2F1B71883000A21C4D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B1183B301B71884C00A21C4D /* ContactListViewController.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		B1183B321B71891C00A21C4D /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				B1183B331B71892B00A21C4D /* TodayViewController.swift */,
+			);
+			name = Today;
+			sourceTree = "<group>";
+		};
 		B13901FA1B680EE2000C87BC = {
 			isa = PBXGroup;
 			children = (
@@ -136,10 +167,9 @@
 			children = (
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
-				B1183B261B71666C00A21C4D /* FaceGameIntroViewController.swift */,
-				B1183B271B71666C00A21C4D /* FaceGameIntroViewController.xib */,
-				B1183B1A1B713A2700A21C4D /* FaceGameViewController.swift */,
-				B1183B1E1B71580200A21C4D /* FaceGameView.swift */,
+				B1183B321B71891C00A21C4D /* Today */,
+				B1183B2E1B71881400A21C4D /* Face Game */,
+				B1183B2F1B71883000A21C4D /* Contacts */,
 				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
@@ -357,7 +387,9 @@
 				B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */,
 				B1183B1D1B71480200A21C4D /* Person.swift in Sources */,
 				B1183B1F1B71580200A21C4D /* FaceGameView.swift in Sources */,
+				B1183B341B71892B00A21C4D /* TodayViewController.swift in Sources */,
 				B1183B281B71666C00A21C4D /* FaceGameIntroViewController.swift in Sources */,
+				B1183B311B71884C00A21C4D /* ContactListViewController.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

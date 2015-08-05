@@ -24,7 +24,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Standard programmatic interface setup
 		self.window = UIWindow()
 		self.window!.rootViewController = LoginViewController() {
-			self.window!.rootViewController = FaceGameIntroViewController()
+			let tabBarController = UITabBarController()
+
+			tabBarController.viewControllers = [
+				TodayViewController(),
+				FaceGameIntroViewController(),
+				ContactListViewController()
+			]
+
+			self.window!.rootViewController = tabBarController
 		}
 		self.window!.makeKeyAndVisible()
 
