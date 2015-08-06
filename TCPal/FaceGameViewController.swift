@@ -74,6 +74,10 @@ class FaceGameViewController: UIViewController {
 
 	// MARK: - Happenin' Stuff
 
+	override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+		return .Portrait
+	}
+
 	func showNextPerson() {
 
 		self.currentPersonIndex += 1
