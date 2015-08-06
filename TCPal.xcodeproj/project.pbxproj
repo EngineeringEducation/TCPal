@@ -78,6 +78,7 @@
 		B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCPal-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.release.xcconfig"; sourceTree = "<group>"; };
+		B1EA05271B7417AD00868BC2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +156,7 @@
 		B13901FA1B680EE2000C87BC = {
 			isa = PBXGroup;
 			children = (
+				B1EA05271B7417AD00868BC2 /* README.md */,
 				B13902051B680EE2000C87BC /* TCPal */,
 				B139021C1B680EE3000C87BC /* TCPalTests */,
 				B13902271B680EE3000C87BC /* TCPalUITests */,
