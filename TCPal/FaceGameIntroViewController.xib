@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oh hi. wanna play the face game?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-0p-kgO">
-                    <rect key="frame" x="173" y="114" width="254" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="oh hi. wanna play the face game? it's tc18 right now." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7g-0p-kgO">
+                    <rect key="frame" x="8" y="77" width="582" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -46,17 +46,29 @@
                         <action selector="didTapPlay:" destination="-1" eventType="touchUpInside" id="LZL-gW-JAg"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(we'll try to get all the pictures but we need to clean up our data so there will be holes. don't judge)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P67-9Z-537">
+                    <rect key="frame" x="8" y="111" width="323" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="323" id="SvN-lW-xG1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="D7g-0p-kgO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="FUe-YW-s4x"/>
                 <constraint firstItem="U6c-E6-AZH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Jvu-9x-2vm"/>
                 <constraint firstAttribute="bottom" secondItem="fv8-V2-Mzb" secondAttribute="bottom" constant="78" id="Lmr-TR-dzO"/>
                 <constraint firstItem="fv8-V2-Mzb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NAz-vX-Qqf"/>
                 <constraint firstItem="U6c-E6-AZH" firstAttribute="baseline" secondItem="fv8-V2-Mzb" secondAttribute="baseline" id="S3T-Nw-dqI"/>
                 <constraint firstItem="aFp-pg-OxK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZTi-QJ-Sqz"/>
+                <constraint firstAttribute="trailing" secondItem="D7g-0p-kgO" secondAttribute="trailing" constant="10" id="aO5-G7-iGq"/>
                 <constraint firstItem="aFp-pg-OxK" firstAttribute="baseline" secondItem="fv8-V2-Mzb" secondAttribute="baseline" id="gXA-Oo-UYt"/>
-                <constraint firstItem="D7g-0p-kgO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gdK-Yt-Q49"/>
-                <constraint firstItem="D7g-0p-kgO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="114" id="lfh-wi-ZSV"/>
+                <constraint firstItem="P67-9Z-537" firstAttribute="top" secondItem="D7g-0p-kgO" secondAttribute="bottom" constant="13.5" id="juy-99-V6h"/>
+                <constraint firstItem="P67-9Z-537" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="mWj-KV-7Od"/>
+                <constraint firstItem="D7g-0p-kgO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uej-Ca-wYh"/>
             </constraints>
         </view>
     </objects>

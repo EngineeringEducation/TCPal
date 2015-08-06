@@ -78,13 +78,18 @@ class FaceGameIntroViewController: UIViewController {
 	}
 
 	static func loadAllMaterials(completion: (persons:[Person]?, error:ErrorType?) -> Void) {
-		let sampleJSONURL = NSBundle.mainBundle().URLForResource("facegame-persons-sample", withExtension: "json")!
+		let sampleJSONURL = NSBundle.mainBundle().URLForResource("tc-18", withExtension: "json")!
 		do {
 			let sampleJSON = try String(contentsOfURL: sampleJSONURL)
-			let persons = try self.personsFromJSON(sampleJSON)
+			let persons = try Person.arrayFromJSON(sampleJSON)
 			self.loadFaces(persons: persons, completion: { (success) -> Void in
-				if success {
-					completion(persons: persons, error: nil)
+				// FIXME: Right now images are sourced from wherever, some links aren't even to images as such, so I guess partial failure is OK
+				let personsWithFaces = persons.filter({ (person) -> Bool in
+					person.face != nil
+				})
+
+				if (personsWithFaces.count >= 4) {
+					completion(persons: personsWithFaces, error: nil)
 				} else {
 					completion(persons: nil, error: nil)
 				}
@@ -117,39 +122,4 @@ class FaceGameIntroViewController: UIViewController {
 			}
 		}
 	}
-
-	enum PersonJSONError : ErrorType {
-		case MalformedInput
-	}
-
-	static func personsFromJSON(JSON: String) throws -> [Person] {
-
-		guard let JSONData = JSON.dataUsingEncoding(NSUTF8StringEncoding) else {
-			throw PersonJSONError.MalformedInput
-		}
-
-		let JSONObject = try NSJSONSerialization.JSONObjectWithData(JSONData, options: NSJSONReadingOptions(rawValue:0))
-
-		guard let personDicts = JSONObject as? [[String : String]] else {
-			throw PersonJSONError.MalformedInput
-		}
-
-		var persons = [Person]()
-
-		for personDict in personDicts {
-			guard let name = personDict["name"], faceString = personDict["face"], faceURL = NSURL(string: faceString) else {
-				throw PersonJSONError.MalformedInput
-			}
-
-			let person = Person(
-				name: name,
-				faceURL: faceURL
-			)
-			
-			persons.append(person)
-		}
-
-		return persons
-	}
-
 }

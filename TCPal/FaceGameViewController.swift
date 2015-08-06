@@ -27,7 +27,7 @@ class FaceGameViewController: UIViewController {
 	let persons : [Person] // This has been shuffled into the intended order of presentation.
 
 	lazy var distinctNames : [String] = {
-		Array(Set(self.persons.map { $0.name }))
+		Array(Set(self.persons.map { $0.fullName }))
 	}()
 
 	var correctCount = 0
@@ -80,7 +80,7 @@ class FaceGameViewController: UIViewController {
 
 		var randomNames = Array((GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(self.distinctNames) as! [String])[0..<self.faceGameView.nameOptionCount])
 
-		let selectedName = self.currentPerson.name
+		let selectedName = self.currentPerson.fullName
 
 		// Ensure that the correct name makes it into the random array
 		if !randomNames.contains(selectedName) {
@@ -104,7 +104,7 @@ class FaceGameViewController: UIViewController {
 		let buttonIndex = self.faceGameView.buttons.indexOf(sender)!
 		let selectedName = self.nameOptions[buttonIndex]
 
-		let correct = (selectedName == self.currentPerson.name)
+		let correct = (selectedName == self.currentPerson.fullName)
 		if (correct) {
 			self.correctCount++
 		}

@@ -46,4 +46,6 @@ Carthage/Build
 
 *.xcworkspace
 
+# sample data
+*tc-*.json
 
