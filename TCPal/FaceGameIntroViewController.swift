@@ -81,8 +81,8 @@ class FaceGameIntroViewController: UIViewController {
 		let sampleJSONURL = NSBundle.mainBundle().URLForResource("tc-18", withExtension: "json")!
 		do {
 			let sampleJSON = try String(contentsOfURL: sampleJSONURL)
-			let persons = try Person.arrayFromJSON(sampleJSON)
-			self.loadFaces(persons: persons, completion: { (success) -> Void in
+			let persons = try Person.arrayFromJSON(sampleJSON, cohort:18)
+			Person.loadFaces(persons: persons, completion: { (success) -> Void in
 				// FIXME: Right now images are sourced from wherever, some links aren't even to images as such, so I guess partial failure is OK
 				let personsWithFaces = persons.filter({ (person) -> Bool in
 					person.face != nil
@@ -99,27 +99,5 @@ class FaceGameIntroViewController: UIViewController {
 			completion(persons: nil, error: error)
 		}
 
-	}
-
-	static func loadFaces(persons persons: [Person], completion: (success: Bool) -> Void) {
-
-		var extantCount = persons.count
-		var overallSuccess = true
-
-		let incrementalCompletion : (success:Bool) -> Void = { success in
-			overallSuccess = overallSuccess && success
-
-			if (--extantCount == 0) {
-				completion(success: overallSuccess)
-			}
-		}
-
-		for person in persons {
-			if let _ = person.face {
-				incrementalCompletion(success: true)
-			} else {
-				person.getFace(incrementalCompletion)
-			}
-		}
 	}
 }

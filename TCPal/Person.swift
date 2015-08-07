@@ -8,56 +8,6 @@
 
 import ContactsUI
 
-enum Track {
-	case SalesBD
-	case GrowthMarketing
-	case ProductDesign
-	case Engineering
-
-	init?(name : String) {
-		switch (name) {
-		case "BD / Sales":
-			self = .SalesBD
-		case "Sales & BD":
-			self = .SalesBD
-		case "Growth":
-			self = .GrowthMarketing
-		case "Product Design":
-			self = .ProductDesign
-		case "Engineering":
-			self = .Engineering
-		default:
-			return nil
-		}
-	}
-
-	func abbreviation() -> String {
-		switch (self) {
-		case .SalesBD:
-			return "SBD"
-		case .GrowthMarketing:
-			return "GM"
-		case .ProductDesign:
-			return "PD"
-		case .Engineering:
-			return "E"
-		}
-	}
-
-	func color() -> UIColor {
-		switch (self) {
-		case .SalesBD:
-			return UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-		case .GrowthMarketing:
-			return UIColor(red: 0.1, green: 0.8, blue: 0.1, alpha: 1)
-		case .ProductDesign:
-			return UIColor(red: 0.6, green: 0, blue: 0.6, alpha: 1)
-		case .Engineering:
-			return UIColor(red: 0.1, green: 0, blue: 1, alpha: 1)
-		}
-	}
-}
-
 class Person {
 	let givenName : String
 	let familyName : String
@@ -68,25 +18,40 @@ class Person {
 		}
 	}
 
+	var face : UIImage?
+	let faceURL : NSURL?
+
 	let tradecraftEmail : String
 	let personalEmail : String
+
+	let cell : String?
 
 	let track : Track
 	let cohort : Int
 
-	var face : UIImage?
-	let faceURL : NSURL?
+	let linkedIn : String?
+	let twitter : String?
 
-	init(givenName: String, familyName: String, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, track: Track, cohort: Int) {
+	let biography : String?
+
+	init(givenName: String, familyName: String, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, cell: String?, track: Track, cohort: Int, linkedIn: String?, twitter: String?, biography : String?) {
 		self.givenName = givenName
 		self.familyName = familyName
 
+		self.faceURL = faceURL
+
 		self.tradecraftEmail = tradecraftEmail
 		self.personalEmail = personalEmail
+
+		self.cell = cell
+
 		self.track = track
 		self.cohort = cohort
 
-		self.faceURL = faceURL
+		self.linkedIn = linkedIn
+		self.twitter = twitter
+
+		self.biography = biography
 	}
 }
 
@@ -98,10 +63,51 @@ extension Person {
 			contact.givenName = self.givenName ?? ""
 			contact.familyName = self.familyName ?? ""
 
+			if let face = self.face {
+				contact.imageData = UIImageJPEGRepresentation(face, 1)
+			}
+
 			contact.emailAddresses = [
-				CNLabeledValue(label: "Tradecraft", value: self.tradecraftEmail),
-				CNLabeledValue(label: "Personal", value: self.personalEmail)
+				CNLabeledValue(label: "Tradecraft Email", value: self.tradecraftEmail),
+				CNLabeledValue(label: "Personal Email", value: self.personalEmail)
 			]
+
+			if let cell = self.cell {
+				contact.phoneNumbers = [
+					CNLabeledValue(label: "Cell", value: CNPhoneNumber(stringValue: cell))
+				]
+			}
+
+			contact.departmentName = "TC\(self.cohort) \(self.track.description())"
+
+			if let linkedIn = self.linkedIn {
+				// TODO: This is hacky
+				let username = linkedIn.componentsSeparatedByString("/").last!
+				let value = CNLabeledValue(label: nil, value: CNSocialProfile(
+					urlString: nil,
+					username: username,
+					userIdentifier: nil,
+					service: CNSocialProfileServiceLinkedIn
+					)
+				)
+				contact.socialProfiles.append(value)
+			}
+
+			if let twitter = self.twitter {
+				let value = CNLabeledValue(label: nil, value: CNSocialProfile(
+					urlString: nil,
+					username: twitter,
+					userIdentifier: nil,
+					service: CNSocialProfileServiceTwitter
+					)
+				)
+
+				contact.socialProfiles.append(value)
+			}
+
+			if let biography = self.biography {
+				contact.note = biography
+			}
 
 			return contact
 		}
@@ -137,7 +143,7 @@ extension Person { // Networking helpers
 		case MalformedInput
 	}
 
-	static func arrayFromJSON(JSON: String) throws -> [Person] {
+	static func arrayFromJSON(JSON: String, cohort: Int) throws -> [Person] {
 
 		guard let JSONData = JSON.dataUsingEncoding(NSUTF8StringEncoding) else {
 			throw JSONError.MalformedInput
@@ -166,14 +172,23 @@ extension Person { // Networking helpers
 			let faceString = personDict["photoLink"]
 			let faceURL = (faceString != nil) ? NSURL(string: faceString!) : nil
 
+			let cell      = personDict["cell"]
+			let linkedIn  = personDict["linkedin"]
+			let twitter   = personDict["twitter"]
+			let biography = personDict["characterBio"]
+
 			let person = Person(
 				givenName: givenName,
 				familyName: familyName,
 				faceURL: faceURL,
 				tradecraftEmail: tradecraftEmail,
 				personalEmail: personalEmail,
+				cell: cell,
 				track: track,
-				cohort: 18
+				cohort: cohort,
+				linkedIn: linkedIn,
+				twitter: twitter,
+				biography: biography
 			)
 
 			persons.append(person)
@@ -181,4 +196,27 @@ extension Person { // Networking helpers
 
 		return persons
 	}
+
+	static func loadFaces(persons persons: [Person], completion: (success: Bool) -> Void) {
+
+		var extantCount = persons.count
+		var overallSuccess = true
+
+		let incrementalCompletion : (success:Bool) -> Void = { success in
+			overallSuccess = overallSuccess && success
+
+			if (--extantCount == 0) {
+				completion(success: overallSuccess)
+			}
+		}
+
+		for person in persons {
+			if let _ = person.face {
+				incrementalCompletion(success: true)
+			} else {
+				person.getFace(incrementalCompletion)
+			}
+		}
+	}
+
 }

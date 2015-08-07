@@ -15,7 +15,22 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 		super.init(nibName: nil, bundle: nil)
 
 		self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Contacts, tag: 0)
-		self.navigationItem.title = NSLocalizedString("contactList.title", value: "you have many friends", comment: "witticism about friendness")
+
+		let titleOptions = [
+			NSLocalizedString("contactList.title0", value: "you have many friends", comment: "witticism about friendness"),
+			NSLocalizedString("contactList.title1", value: "so many opportunities to say hi", comment: "remark on the multiplicities of communications"),
+			NSLocalizedString("contactList.title2", value: "we think you are so interesting", comment: "affirmation of interestingness"),
+			NSLocalizedString("contactList.title3", value: "have you met someone neat today", comment: "gentle prod to make friends"),
+			NSLocalizedString("contactList.title4", value: "send someone a nice thought", comment: "suggestion to reach out")
+		]
+
+		self.navigationItem.title = titleOptions[Int(arc4random_uniform(UInt32(titleOptions.count)))]
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(
+			title: NSLocalizedString("contactList.backText", value: "friends", comment: "text for the back button from contacts to the contact list"),
+			style: .Plain,
+			target: nil,
+			action: nil
+		)
 
 		self.loadPersons()
 	}
@@ -118,14 +133,19 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 		do {
 			let tc18JSON = try String(contentsOfURL: tc18JSONURL)
 			let tc17JSON = try String(contentsOfURL: tc17JSONURL)
-			let tc18 = try Person.arrayFromJSON(tc18JSON)
-			let tc17 = try Person.arrayFromJSON(tc17JSON)
+			let tc18 = try Person.arrayFromJSON(tc18JSON, cohort: 18)
+			let tc17 = try Person.arrayFromJSON(tc17JSON, cohort: 17)
+
+			// TODO: Is on-demand photo loading plausible with CNContact?
+			Person.loadFaces(persons:tc18, completion: { (success) -> Void in /* !! */ })
+			Person.loadFaces(persons:tc17, completion: { (success) -> Void in /* !! */ })
 
 			var contacts = [[Person]](count: 18, repeatedValue: [Person]())
 			contacts[0] = tc18
 			contacts[1] = tc17
 
 			self.contacts = contacts
+
 		} catch let error {
 			print("oh no, contact json error: \(error)")
 		}
