@@ -134,6 +134,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B10478411B75704800D6A032 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Archive;
+			sourceTree = "<group>";
+		};
 		B1183B2E1B71881400A21C4D /* Face Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +199,7 @@
 				B13902061B680EE2000C87BC /* AppDelegate.swift */,
 				B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */,
 				B1183B321B71891C00A21C4D /* Today */,
+				B10478411B75704800D6A032 /* Archive */,
 				B1EA05221B7411BB00868BC2 /* Bingo */,
 				B1183B2E1B71881400A21C4D /* Face Game */,
 				B1183B2F1B71883000A21C4D /* Contacts */,
@@ -584,6 +592,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TCPal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.janardanyri.TCPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +609,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TCPal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.janardanyri.TCPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";

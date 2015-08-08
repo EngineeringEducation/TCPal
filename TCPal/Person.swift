@@ -55,6 +55,7 @@ class Person {
 	}
 }
 
+@available(iOS 9.0, *)
 extension Person {
 	var equivalentCNContact : CNContact {
 		get {

@@ -35,7 +35,11 @@ class BingoSquareView: UIView {
 
 	lazy var titleLabel : UILabel = {
 		let label = UILabel()
-		label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleTitle2)
+		if #available(iOS 9.0, *) {
+			label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleTitle2)
+		} else {
+			label.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+		}
 		return label
 		}()
 

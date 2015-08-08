@@ -117,10 +117,17 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 	// MARK: - UITableViewDelegate
 
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let person = self.personForIndexPath(indexPath)
-		let contact = person.equivalentCNContact
-		let contactVC = CNContactViewController(forUnknownContact: contact)
-		self.navigationController!.pushViewController(contactVC, animated: true)
+		if #available(iOS 9.0, *) {
+			let person = self.personForIndexPath(indexPath)
+		    let contact = person.equivalentCNContact
+			let contactVC = CNContactViewController(forUnknownContact: contact)
+			self.navigationController!.pushViewController(contactVC, animated: true)
+		} else {
+		    let alert = UIAlertController(title: "Nuh-uh!", message: "Contact sheets currently only available in bleeding-edge iOS9 betas.", preferredStyle: .Alert)
+			alert.addAction(UIAlertAction(title: "Aw man!", style: .Cancel, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
+				tableView.deselectRowAtIndexPath(indexPath, animated: true)
+		}
 	}
 
 	// MARK: - Unsorted

@@ -11,7 +11,7 @@ import UIKit
 class FaceGameIntroViewController: UIViewController {
 
 	init() {
-		super.init(nibName: nil, bundle: nil)
+		super.init(nibName: "FaceGameIntroViewController", bundle: nil)
 
 		self.tabBarItem = UITabBarItem(title: "Face Game", image: nil, selectedImage: nil)
 	}

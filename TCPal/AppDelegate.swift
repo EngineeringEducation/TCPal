@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		assert(configureError == nil, "Error configuring Google services: \(configureError)")
 
 		// Standard programmatic interface setup
-		self.window = UIWindow()
+		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		self.window!.rootViewController = LoginViewController() {
 			let tabBarController = UITabBarController()
 

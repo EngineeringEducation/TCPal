@@ -6,14 +6,13 @@
 //  Copyright © 2015 Janardan Yri. All rights reserved.
 //
 
-import GameplayKit
 import QuartzCore
 import UIKit
 
 class FaceGameViewController: UIViewController {
 
 	init(persons: [Person]) {
-		self.persons = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(persons) as! [Person]
+		self.persons = persons.wk_shuffled()
 
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -82,7 +81,7 @@ class FaceGameViewController: UIViewController {
 
 		self.currentPersonIndex += 1
 
-		var randomNames = Array((GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(self.distinctNames) as! [String])[0..<self.faceGameView.nameOptionCount])
+		var randomNames = Array(self.distinctNames.wk_shuffled()[0..<self.faceGameView.nameOptionCount])
 
 		let selectedName = self.currentPerson.fullName
 

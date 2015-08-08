@@ -24,6 +24,8 @@ class FaceGameView: UIView {
 		for button in self.buttons {
 			self.addSubview(button)
 		}
+
+		self.setNeedsUpdateConstraints()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
