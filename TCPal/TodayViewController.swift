@@ -26,7 +26,7 @@ class TodayViewController: UIViewController {
 		self.view = UIView()
 		self.view.backgroundColor = UIColor.whiteColor()
 
-		let infoLabel = UILabel(frame: CGRectMake(20, 100, 300, 50))
+		let infoLabel = UILabel(frame: CGRectMake(20, 50, 300, 50))
 		infoLabel.text = "today at tc... lots is happening"
 		self.view.addSubview(infoLabel)
 	}

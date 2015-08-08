@@ -16,7 +16,7 @@ class BingoBoardView: UIView {
 		super.init(frame: CGRectZero)
 		self.backgroundColor = UIColor.whiteColor()
 
-		let infoLabel = UILabel(frame: CGRectMake(20, 100, 300, 50))
+		let infoLabel = UILabel(frame: CGRectMake(20, 50, 300, 50))
 		infoLabel.text = "soon this will be design bingo, ok?"
 		self.addSubview(infoLabel)
 
@@ -59,7 +59,8 @@ class BingoBoardView: UIView {
 		let firstSquareControl = self.squareControls[0][0]
 
 		firstSquareControl.snp_updateConstraints { (make) -> Void in
-			make.leading.equalTo(0)
+			make.top.greaterThanOrEqualTo(0) // This can supersede the latter in landscape
+			make.leading.equalTo(0).priority(900)
 			make.height.equalTo(firstSquareControl.snp_width)
 		}
 
