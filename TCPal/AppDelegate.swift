@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 			tabBarController.viewControllers = [
 				TodayViewController(),
+				UINavigationController(rootViewController: ArchiveViewController()),
 				BingoBoardViewController(),
 				FaceGameIntroViewController(),
 				UINavigationController(rootViewController: ContactListViewController())
