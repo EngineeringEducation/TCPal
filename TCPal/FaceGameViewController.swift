@@ -25,10 +25,6 @@ class FaceGameViewController: UIViewController {
 
 	let persons : [Person] // This has been shuffled into the intended order of presentation.
 
-	lazy var distinctNames : [String] = {
-		Array(Set(self.persons.map { $0.fullName }))
-	}()
-
 	var correctCount = 0
 
 	var currentPersonIndex = -1 {
@@ -84,7 +80,11 @@ class FaceGameViewController: UIViewController {
 
 		self.currentPersonIndex += 1
 
-		var randomNames = Array(self.distinctNames.wk_shuffled()[0..<self.faceGameView.nameOptionCount])
+		let sameGenderedNames = self.persons.filter({ (person) -> Bool in
+			return person.gender == self.currentPerson.gender
+		}).map({ $0.fullName })
+
+		var randomNames = Array(sameGenderedNames.wk_shuffled()[0..<self.faceGameView.nameOptionCount])
 
 		let selectedName = self.currentPerson.fullName
 

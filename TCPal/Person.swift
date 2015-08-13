@@ -8,6 +8,23 @@
 
 import ContactsUI
 
+enum Gender {
+	case Male
+	case Female
+	case IDontBelieveInBinaries
+
+	init(string: String) {
+		switch (string) {
+		case "m":
+			self = .Male
+		case "f":
+			self = .Female
+		default:
+			self = .IDontBelieveInBinaries
+		}
+	}
+}
+
 class Person {
 	let givenName : String
 	let familyName : String
@@ -17,6 +34,8 @@ class Person {
 			return "\(self.givenName) \(self.familyName)"
 		}
 	}
+
+	let gender : Gender
 
 	var face : UIImage?
 	let faceURL : NSURL?
@@ -34,9 +53,11 @@ class Person {
 
 	let biography : String?
 
-	init(givenName: String, familyName: String, face: UIImage?, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, cell: String?, track: Track, cohort: Int, linkedIn: String?, twitter: String?, biography : String?) {
+	init(givenName: String, familyName: String, gender: Gender, face: UIImage?, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, cell: String?, track: Track, cohort: Int, linkedIn: String?, twitter: String?, biography : String?) {
 		self.givenName = givenName
 		self.familyName = familyName
+
+		self.gender = gender
 
 		self.face = face
 		self.faceURL = faceURL
@@ -162,6 +183,7 @@ extension Person { // Networking helpers
 		for personDict in personDicts {
 			guard let givenName = personDict["firstName"],
 				familyName = personDict["lastName"],
+				genderString = personDict["gender"],
 				tradecraftEmail = personDict["emailTradecraft"],
 				personalEmail = personDict["emailPersonal"],
 				trackName = personDict["track"],
@@ -170,6 +192,8 @@ extension Person { // Networking helpers
 				else {
 				throw JSONError.MalformedInput
 			}
+
+			let gender = Gender(string:genderString)
 
 			let faceString = personDict["photoLink"]
 
@@ -186,6 +210,7 @@ extension Person { // Networking helpers
 			let person = Person(
 				givenName: givenName,
 				familyName: familyName,
+				gender: gender,
 				face: face,
 				faceURL: faceURL,
 				tradecraftEmail: tradecraftEmail,
