@@ -29,6 +29,7 @@
 		B15FBB541B72D5C1001CC68F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FBB531B72D5C1001CC68F /* ContactCell.swift */; };
 		B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */; };
 		B19695851B7D07F1003288B0 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19695841B7D07F1003288B0 /* ArchiveViewController.swift */; };
+		B19695871B7D15F7003288B0 /* tc-16.json in Resources */ = {isa = PBXBuildFile; fileRef = B19695861B7D15F7003288B0 /* tc-16.json */; };
 		B1EA05211B7411B000868BC2 /* BingoBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05201B7411B000868BC2 /* BingoBoardViewController.swift */; };
 		B1EA05241B74124700868BC2 /* BingoBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05231B74124700868BC2 /* BingoBoardView.swift */; };
 		B1EA05261B7412A000868BC2 /* BingoSquareControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05251B7412A000868BC2 /* BingoSquareControl.swift */; };
@@ -84,6 +85,7 @@
 		B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCPal-Bridging-Header.h"; sourceTree = "<group>"; };
 		B19695841B7D07F1003288B0 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
+		B19695861B7D15F7003288B0 /* tc-16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-16.json"; sourceTree = "<group>"; };
 		B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.release.xcconfig"; sourceTree = "<group>"; };
 		B1EA05201B7411B000868BC2 /* BingoBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBoardViewController.swift; sourceTree = "<group>"; };
 		B1EA05231B74124700868BC2 /* BingoBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBoardView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				B15FBB4B1B72D116001CC68F /* tc-18.json */,
 				B15FBB4D1B72D1D2001CC68F /* tc-17.json */,
+				B19695861B7D15F7003288B0 /* tc-16.json */,
 				B15FBB4F1B72D1FE001CC68F /* tc-staff.json */,
 			);
 			name = "Sample Data";
@@ -370,6 +373,7 @@
 				B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */,
 				B15FBB501B72D1FE001CC68F /* tc-staff.json in Resources */,
 				B15FBB4C1B72D116001CC68F /* tc-18.json in Resources */,
+				B19695871B7D15F7003288B0 /* tc-16.json in Resources */,
 				B15FBB4E1B72D1D2001CC68F /* tc-17.json in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
 			);

@@ -133,29 +133,34 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 	// MARK: - Unsorted
 
 	func loadPersons() {
-		// TODO: Get real data
+		// TODO: All of this data should ultimately come over the network instead of hardcoding cohortCount and bundling json files.
 
-		let tc18JSONURL = NSBundle.mainBundle().URLForResource("tc-18", withExtension: "json")!
-		let tc17JSONURL = NSBundle.mainBundle().URLForResource("tc-17", withExtension: "json")!
-		do {
-			let tc18JSON = try String(contentsOfURL: tc18JSONURL)
-			let tc17JSON = try String(contentsOfURL: tc17JSONURL)
-			let tc18 = try Person.arrayFromJSON(tc18JSON, cohort: 18)
-			let tc17 = try Person.arrayFromJSON(tc17JSON, cohort: 17)
+		let cohortCount = 18
 
-			// TODO: Is on-demand photo loading plausible with CNContact?
-			Person.loadFaces(persons:tc18, completion: { (success) -> Void in /* !! */ })
-			Person.loadFaces(persons:tc17, completion: { (success) -> Void in /* !! */ })
+		var contacts = [[Person]](count: cohortCount, repeatedValue: [Person]())
 
-			var contacts = [[Person]](count: 18, repeatedValue: [Person]())
-			contacts[0] = tc18
-			contacts[1] = tc17
+		for cohort in stride(from: cohortCount, through: 1, by: -1) {
+			guard let JSONURL = NSBundle.mainBundle().URLForResource("tc-\(cohort)", withExtension: "json") else {
+				print("missing sample data file for cohort \(cohort)")
+				continue
+			}
 
-			self.contacts = contacts
+			do {
+				let JSON = try String(contentsOfURL: JSONURL)
+				let persons = try Person.arrayFromJSON(JSON, cohort: cohort)
 
-		} catch let error {
-			print("oh no, contact json error: \(error)")
+				// TODO: Is on-demand photo loading plausible for CNContact?
+				Person.loadFaces(persons:persons, completion: { (success) -> Void in /* !! */ })
+
+				// heads up: normally this would be off-by-one but cohorts start numbering from 1
+				contacts[cohortCount - cohort] = persons
+
+			} catch let error {
+				print("oh no, contact json error: \(error)")
+			}
 		}
-		
+
+		self.contacts = contacts
+
 	}
 }
