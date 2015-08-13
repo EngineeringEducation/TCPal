@@ -34,10 +34,11 @@ class Person {
 
 	let biography : String?
 
-	init(givenName: String, familyName: String, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, cell: String?, track: Track, cohort: Int, linkedIn: String?, twitter: String?, biography : String?) {
+	init(givenName: String, familyName: String, face: UIImage?, faceURL: NSURL?, tradecraftEmail: String, personalEmail: String, cell: String?, track: Track, cohort: Int, linkedIn: String?, twitter: String?, biography : String?) {
 		self.givenName = givenName
 		self.familyName = familyName
 
+		self.face = face
 		self.faceURL = faceURL
 
 		self.tradecraftEmail = tradecraftEmail
@@ -171,6 +172,10 @@ extension Person { // Networking helpers
 			}
 
 			let faceString = personDict["photoLink"]
+
+			// FIXME: This only should be here while we're using sample data. will gracefully return nil where we don't have photos
+			let face = UIImage(named: "\(givenName.lowercaseString)-\(familyName.lowercaseString).JPG")
+
 			let faceURL = (faceString != nil) ? NSURL(string: faceString!) : nil
 
 			let cell      = personDict["cell"]
@@ -181,6 +186,7 @@ extension Person { // Networking helpers
 			let person = Person(
 				givenName: givenName,
 				familyName: familyName,
+				face: face,
 				faceURL: faceURL,
 				tradecraftEmail: tradecraftEmail,
 				personalEmail: personalEmail,

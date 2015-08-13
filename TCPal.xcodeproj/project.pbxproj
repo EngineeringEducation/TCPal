@@ -22,14 +22,26 @@
 		B139021E1B680EE3000C87BC /* TCPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139021D1B680EE3000C87BC /* TCPalTests.swift */; };
 		B13902291B680EE3000C87BC /* TCPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902281B680EE3000C87BC /* TCPalUITests.swift */; };
 		B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */; };
-		B15FBB4C1B72D116001CC68F /* tc-18.json in Resources */ = {isa = PBXBuildFile; fileRef = B15FBB4B1B72D116001CC68F /* tc-18.json */; };
-		B15FBB4E1B72D1D2001CC68F /* tc-17.json in Resources */ = {isa = PBXBuildFile; fileRef = B15FBB4D1B72D1D2001CC68F /* tc-17.json */; };
-		B15FBB501B72D1FE001CC68F /* tc-staff.json in Resources */ = {isa = PBXBuildFile; fileRef = B15FBB4F1B72D1FE001CC68F /* tc-staff.json */; };
+		B144EF9A1B7D4532005E24EE /* derrick-huey.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */; };
+		B144EF9B1B7D4532005E24EE /* emmanuel-eleyae.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */; };
+		B144EF9C1B7D4532005E24EE /* francesca-chua.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */; };
+		B144EF9D1B7D4532005E24EE /* liana-dumitru.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */; };
+		B144EF9E1B7D4532005E24EE /* matthew-goldwater.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */; };
+		B144EF9F1B7D4532005E24EE /* philip-chun.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8F1B7D4532005E24EE /* philip-chun.JPG */; };
+		B144EFA01B7D4532005E24EE /* remy-martin.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF901B7D4532005E24EE /* remy-martin.JPG */; };
+		B144EFA11B7D4532005E24EE /* sean-kregness.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF911B7D4532005E24EE /* sean-kregness.JPG */; };
+		B144EFA21B7D4532005E24EE /* stephanie-hsu.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */; };
+		B144EFA31B7D4532005E24EE /* tc-16.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF931B7D4532005E24EE /* tc-16.json */; };
+		B144EFA41B7D4532005E24EE /* tc-17.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF941B7D4532005E24EE /* tc-17.json */; };
+		B144EFA51B7D4532005E24EE /* tc-18.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF951B7D4532005E24EE /* tc-18.json */; };
+		B144EFA61B7D4532005E24EE /* tc-staff.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF961B7D4532005E24EE /* tc-staff.json */; };
+		B144EFA71B7D4532005E24EE /* tommy-engström.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF971B7D4532005E24EE /* tommy-engström.JPG */; };
+		B144EFA81B7D4532005E24EE /* trent-mervine.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF981B7D4532005E24EE /* trent-mervine.JPG */; };
+		B144EFA91B7D4532005E24EE /* vanessa-wallis.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */; };
 		B15FBB521B72D446001CC68F /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FBB511B72D446001CC68F /* ContactListView.swift */; };
 		B15FBB541B72D5C1001CC68F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FBB531B72D5C1001CC68F /* ContactCell.swift */; };
 		B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */; };
 		B19695851B7D07F1003288B0 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19695841B7D07F1003288B0 /* ArchiveViewController.swift */; };
-		B19695871B7D15F7003288B0 /* tc-16.json in Resources */ = {isa = PBXBuildFile; fileRef = B19695861B7D15F7003288B0 /* tc-16.json */; };
 		B1EA05211B7411B000868BC2 /* BingoBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05201B7411B000868BC2 /* BingoBoardViewController.swift */; };
 		B1EA05241B74124700868BC2 /* BingoBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05231B74124700868BC2 /* BingoBoardView.swift */; };
 		B1EA05261B7412A000868BC2 /* BingoSquareControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA05251B7412A000868BC2 /* BingoSquareControl.swift */; };
@@ -77,15 +89,27 @@
 		B13902281B680EE3000C87BC /* TCPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPalUITests.swift; sourceTree = "<group>"; };
 		B139022A1B680EE3000C87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B15FBB4B1B72D116001CC68F /* tc-18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-18.json"; sourceTree = "<group>"; };
-		B15FBB4D1B72D1D2001CC68F /* tc-17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-17.json"; sourceTree = "<group>"; };
-		B15FBB4F1B72D1FE001CC68F /* tc-staff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-staff.json"; sourceTree = "<group>"; };
+		B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "derrick-huey.JPG"; sourceTree = "<group>"; };
+		B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "emmanuel-eleyae.JPG"; sourceTree = "<group>"; };
+		B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "francesca-chua.JPG"; sourceTree = "<group>"; };
+		B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "liana-dumitru.JPG"; sourceTree = "<group>"; };
+		B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "matthew-goldwater.JPG"; sourceTree = "<group>"; };
+		B144EF8F1B7D4532005E24EE /* philip-chun.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philip-chun.JPG"; sourceTree = "<group>"; };
+		B144EF901B7D4532005E24EE /* remy-martin.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "remy-martin.JPG"; sourceTree = "<group>"; };
+		B144EF911B7D4532005E24EE /* sean-kregness.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sean-kregness.JPG"; sourceTree = "<group>"; };
+		B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stephanie-hsu.JPG"; sourceTree = "<group>"; };
+		B144EF931B7D4532005E24EE /* tc-16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-16.json"; sourceTree = "<group>"; };
+		B144EF941B7D4532005E24EE /* tc-17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-17.json"; sourceTree = "<group>"; };
+		B144EF951B7D4532005E24EE /* tc-18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-18.json"; sourceTree = "<group>"; };
+		B144EF961B7D4532005E24EE /* tc-staff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-staff.json"; sourceTree = "<group>"; };
+		B144EF971B7D4532005E24EE /* tommy-engström.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tommy-engström.JPG"; sourceTree = "<group>"; };
+		B144EF981B7D4532005E24EE /* trent-mervine.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trent-mervine.JPG"; sourceTree = "<group>"; };
+		B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vanessa-wallis.JPG"; sourceTree = "<group>"; };
 		B15FBB511B72D446001CC68F /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		B15FBB531B72D5C1001CC68F /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCPal-Bridging-Header.h"; sourceTree = "<group>"; };
 		B19695841B7D07F1003288B0 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
-		B19695861B7D15F7003288B0 /* tc-16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-16.json"; sourceTree = "<group>"; };
 		B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.release.xcconfig"; sourceTree = "<group>"; };
 		B1EA05201B7411B000868BC2 /* BingoBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBoardViewController.swift; sourceTree = "<group>"; };
 		B1EA05231B74124700868BC2 /* BingoBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BingoBoardView.swift; sourceTree = "<group>"; };
@@ -210,7 +234,7 @@
 				B1183B2F1B71883000A21C4D /* Contacts */,
 				B1183B1C1B71480200A21C4D /* Person.swift */,
 				B1EA05281B74788D00868BC2 /* Track.swift */,
-				B15FBB4A1B72D0F1001CC68F /* Sample Data */,
+				B144EF891B7D4532005E24EE /* Sample Data */,
 				B139020F1B680EE2000C87BC /* Assets.xcassets */,
 				B13902111B680EE2000C87BC /* LaunchScreen.storyboard */,
 				B13902141B680EE2000C87BC /* Info.plist */,
@@ -239,15 +263,27 @@
 			path = TCPalUITests;
 			sourceTree = "<group>";
 		};
-		B15FBB4A1B72D0F1001CC68F /* Sample Data */ = {
+		B144EF891B7D4532005E24EE /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
-				B15FBB4B1B72D116001CC68F /* tc-18.json */,
-				B15FBB4D1B72D1D2001CC68F /* tc-17.json */,
-				B19695861B7D15F7003288B0 /* tc-16.json */,
-				B15FBB4F1B72D1FE001CC68F /* tc-staff.json */,
+				B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */,
+				B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */,
+				B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */,
+				B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */,
+				B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */,
+				B144EF8F1B7D4532005E24EE /* philip-chun.JPG */,
+				B144EF901B7D4532005E24EE /* remy-martin.JPG */,
+				B144EF911B7D4532005E24EE /* sean-kregness.JPG */,
+				B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */,
+				B144EF931B7D4532005E24EE /* tc-16.json */,
+				B144EF941B7D4532005E24EE /* tc-17.json */,
+				B144EF951B7D4532005E24EE /* tc-18.json */,
+				B144EF961B7D4532005E24EE /* tc-staff.json */,
+				B144EF971B7D4532005E24EE /* tommy-engström.JPG */,
+				B144EF981B7D4532005E24EE /* trent-mervine.JPG */,
+				B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */,
 			);
-			name = "Sample Data";
+			path = "Sample Data";
 			sourceTree = "<group>";
 		};
 		B1EA05221B7411BB00868BC2 /* Bingo */ = {
@@ -368,14 +404,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B144EFA41B7D4532005E24EE /* tc-17.json in Resources */,
+				B144EF9B1B7D4532005E24EE /* emmanuel-eleyae.JPG in Resources */,
+				B144EFA71B7D4532005E24EE /* tommy-engström.JPG in Resources */,
+				B144EFA31B7D4532005E24EE /* tc-16.json in Resources */,
+				B144EF9F1B7D4532005E24EE /* philip-chun.JPG in Resources */,
 				B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */,
+				B144EF9C1B7D4532005E24EE /* francesca-chua.JPG in Resources */,
+				B144EF9A1B7D4532005E24EE /* derrick-huey.JPG in Resources */,
+				B144EF9D1B7D4532005E24EE /* liana-dumitru.JPG in Resources */,
+				B144EFA81B7D4532005E24EE /* trent-mervine.JPG in Resources */,
 				B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */,
 				B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */,
-				B15FBB501B72D1FE001CC68F /* tc-staff.json in Resources */,
-				B15FBB4C1B72D116001CC68F /* tc-18.json in Resources */,
-				B19695871B7D15F7003288B0 /* tc-16.json in Resources */,
-				B15FBB4E1B72D1D2001CC68F /* tc-17.json in Resources */,
+				B144EFA21B7D4532005E24EE /* stephanie-hsu.JPG in Resources */,
+				B144EF9E1B7D4532005E24EE /* matthew-goldwater.JPG in Resources */,
+				B144EFA01B7D4532005E24EE /* remy-martin.JPG in Resources */,
+				B144EFA91B7D4532005E24EE /* vanessa-wallis.JPG in Resources */,
+				B144EFA11B7D4532005E24EE /* sean-kregness.JPG in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
+				B144EFA61B7D4532005E24EE /* tc-staff.json in Resources */,
+				B144EFA51B7D4532005E24EE /* tc-18.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -51,6 +51,8 @@ class FaceGameViewController: UIViewController {
 		}
 	}
 
+	var startDate : NSDate!
+
 	// MARK: - View
 
 	lazy var faceGameView = FaceGameView(nameOptionCount: 4)
@@ -69,6 +71,7 @@ class FaceGameViewController: UIViewController {
 		}
 
 		self.showNextPerson()
+		self.startDate = NSDate()
 	}
 
 	// MARK: - Happenin' Stuff
@@ -94,8 +97,26 @@ class FaceGameViewController: UIViewController {
 	}
 
 	func conclude() {
-		let alert = UIAlertController(title: "oh my", message: "you got \(self.correctCount) out of \(self.persons.count)", preferredStyle: .Alert)
-		alert.addAction(UIAlertAction(title: "oh wow!", style: .Default, handler: { (action) -> Void in
+
+		let (title, message, buttonText) : (String, String, String) = {
+			if (self.correctCount == self.persons.count) {
+				let completionSeconds = Int(-self.startDate.timeIntervalSinceNow)
+				return (
+					"good job!",
+					"you knew everyone omg!\nyou took \(completionSeconds) seconds :)",
+					"yay!!"
+				)
+			} else {
+				return (
+					"oh my",
+					"you got \(self.correctCount) out of \(self.persons.count)",
+					"oh wow!"
+				)
+			}
+		}()
+		
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+		alert.addAction(UIAlertAction(title: buttonText, style: .Default, handler: { (action) -> Void in
 			// TODO: completion block / delegate for this view controller
 			self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
 		}))
@@ -112,7 +133,12 @@ class FaceGameViewController: UIViewController {
 			self.correctCount++
 		}
 
-		self.faceGameView.confirmationLabel.text = (correct) ? "Y" : "N"
+		self.faceGameView.confirmationLabel.text = (correct) ? "you're right! :)" : "not so much :("
+		self.faceGameView.confirmationLabel.alpha = 1
+		UIView.animateWithDuration(1) { () -> Void in
+			self.faceGameView.confirmationLabel.alpha = 0
+		}
+
 
 		if self.currentPersonIndex + 1 < self.persons.count {
 			self.showNextPerson()
