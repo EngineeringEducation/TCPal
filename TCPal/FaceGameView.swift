@@ -42,7 +42,6 @@ class FaceGameView: UIView {
 		let imageView = UIImageView()
 		imageView.clipsToBounds = true
 		imageView.contentMode = .ScaleAspectFill
-		imageView.layer.cornerRadius = 100
 		return imageView
 		}()
 
@@ -65,13 +64,13 @@ class FaceGameView: UIView {
 	override func updateConstraints() {
 		self.faceView.snp_updateConstraints { (make) -> Void in
 			make.centerX.equalTo(0)
-			make.top.equalTo(50)
-			make.height.equalTo(200)
-			make.width.equalTo(200)
+			make.top.equalTo(0) // This is calibrated by how Clay's photos are balanced more than anything...!
+			make.leading.equalTo(30).priority(900) // This will break and shrink the image after the buttons reach minimum height
+			make.height.equalTo(self.faceView.snp_width)
 		}
 
 		self.confirmationLabel.snp_updateConstraints { (make) -> Void in
-			make.top.equalTo(self.faceView.snp_bottom).offset(20)
+			make.top.equalTo(self.faceView.snp_bottom).offset(15)
 			make.centerX.equalTo(0)
 			make.height.equalTo(50)
 			// Width will auto-flex
@@ -83,7 +82,7 @@ class FaceGameView: UIView {
 			self.buttons[i].snp_updateConstraints { (make) -> Void in
 				if i == 0 {
 					// Topmost button
-					make.top.greaterThanOrEqualTo(self.confirmationLabel.snp_bottom).offset(20)
+					make.top.greaterThanOrEqualTo(self.confirmationLabel.snp_bottom).offset(15)
 				} else {
 					// Non-topmost button
 					make.top.equalTo(self.buttons[i-1].snp_bottom).offset(20)
