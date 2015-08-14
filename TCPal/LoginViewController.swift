@@ -6,6 +6,7 @@
 //  Copyright © 2015 Janardan Yri. All rights reserved.
 //
 
+import SnapKit
 import UIKit
 
 // TODO: Having this be the sign in delegate "works" right now because the login is the root view controller; ultimately we'll want to move it somewhere more appropriate to improve the app launch experience
@@ -23,11 +24,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 
 	let completion : (Void -> Void)
 
-	lazy var signInButton : GIDSignInButton = {
-		let button = GIDSignInButton()
-		button.frame = CGRect(x: 100, y: 100, width: 200, height: 100)
-		return button
-		}()
+	lazy var signInButton = GIDSignInButton()
 
 	lazy var establishingStatusSpinnerView : UIActivityIndicatorView = {
 		let spinner = UIActivityIndicatorView()
@@ -47,6 +44,13 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 		// This button will be revealed (and the spinner hidden) if auto-signon fails.
 		self.view.addSubview(self.signInButton)
 		self.signInButton.hidden = true
+
+		self.signInButton.snp_updateConstraints { (make) -> Void in
+			make.width.equalTo(200)
+			make.height.equalTo(100)
+			make.centerX.equalTo(0)
+			make.top.equalTo(100)
+		}
 	}
 
 	override func viewDidLoad() {
@@ -61,7 +65,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 
-		print("view did appear")
 		if (GIDSignIn.sharedInstance().currentUser != nil) {
 			// This is intended to handle explicit logins.
 			self.completion()
