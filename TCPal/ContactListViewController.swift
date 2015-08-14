@@ -135,7 +135,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
 	func loadPersons() {
 		// TODO: All of this data should ultimately come over the network instead of hardcoding cohortCount and bundling json files.
 
-		let cohortCount = 18
+		let cohortCount = 19
 
 		var contacts = [[Person]](count: cohortCount, repeatedValue: [Person]())
 

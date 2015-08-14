@@ -70,11 +70,17 @@ class FaceGameViewController: UIViewController {
 		self.startDate = NSDate()
 	}
 
-	// MARK: - Happenin' Stuff
+	// MARK: - UIViewController
 
 	override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
 		return .Portrait
 	}
+
+	override func prefersStatusBarHidden() -> Bool {
+		return true
+	}
+
+	// MARK: - Happenin' Stuff
 
 	func showNextPerson() {
 

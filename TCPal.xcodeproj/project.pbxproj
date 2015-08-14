@@ -22,22 +22,36 @@
 		B139021E1B680EE3000C87BC /* TCPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B139021D1B680EE3000C87BC /* TCPalTests.swift */; };
 		B13902291B680EE3000C87BC /* TCPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13902281B680EE3000C87BC /* TCPalUITests.swift */; };
 		B1428DAA1B6AE69700BE1B6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */; };
-		B144EF9A1B7D4532005E24EE /* derrick-huey.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */; };
-		B144EF9B1B7D4532005E24EE /* emmanuel-eleyae.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */; };
-		B144EF9C1B7D4532005E24EE /* francesca-chua.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */; };
-		B144EF9D1B7D4532005E24EE /* liana-dumitru.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */; };
-		B144EF9E1B7D4532005E24EE /* matthew-goldwater.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */; };
-		B144EF9F1B7D4532005E24EE /* philip-chun.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF8F1B7D4532005E24EE /* philip-chun.JPG */; };
-		B144EFA01B7D4532005E24EE /* remy-martin.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF901B7D4532005E24EE /* remy-martin.JPG */; };
-		B144EFA11B7D4532005E24EE /* sean-kregness.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF911B7D4532005E24EE /* sean-kregness.JPG */; };
-		B144EFA21B7D4532005E24EE /* stephanie-hsu.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */; };
 		B144EFA31B7D4532005E24EE /* tc-16.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF931B7D4532005E24EE /* tc-16.json */; };
 		B144EFA41B7D4532005E24EE /* tc-17.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF941B7D4532005E24EE /* tc-17.json */; };
 		B144EFA51B7D4532005E24EE /* tc-18.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF951B7D4532005E24EE /* tc-18.json */; };
 		B144EFA61B7D4532005E24EE /* tc-staff.json in Resources */ = {isa = PBXBuildFile; fileRef = B144EF961B7D4532005E24EE /* tc-staff.json */; };
-		B144EFA71B7D4532005E24EE /* tommy-engström.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF971B7D4532005E24EE /* tommy-engström.JPG */; };
-		B144EFA81B7D4532005E24EE /* trent-mervine.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF981B7D4532005E24EE /* trent-mervine.JPG */; };
-		B144EFA91B7D4532005E24EE /* vanessa-wallis.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */; };
+		B14F9EE41B7E99720070E290 /* tc-19.json in Resources */ = {isa = PBXBuildFile; fileRef = B14F9ED61B7E99720070E290 /* tc-19.json */; };
+		B14F9EE51B7E99720070E290 /* wade-warren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9ED71B7E99720070E290 /* wade-warren.jpg */; };
+		B14F9EE61B7E99720070E290 /* yossi-goldlust.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9ED81B7E99720070E290 /* yossi-goldlust.jpg */; };
+		B14F9EE71B7E99720070E290 /* tiffany-boccieri.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9ED91B7E99720070E290 /* tiffany-boccieri.jpg */; };
+		B14F9EE81B7E99720070E290 /* sarah-miller.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDA1B7E99720070E290 /* sarah-miller.jpg */; };
+		B14F9EE91B7E99720070E290 /* simran-talreja.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDB1B7E99720070E290 /* simran-talreja.jpg */; };
+		B14F9EEA1B7E99720070E290 /* nathan-sterner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDC1B7E99720070E290 /* nathan-sterner.jpg */; };
+		B14F9EEB1B7E99720070E290 /* kit-arafiles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDD1B7E99720070E290 /* kit-arafiles.jpg */; };
+		B14F9EEC1B7E99720070E290 /* mischelle-mulia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDE1B7E99720070E290 /* mischelle-mulia.jpg */; };
+		B14F9EED1B7E99720070E290 /* jim-d'amico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EDF1B7E99720070E290 /* jim-d'amico.jpg */; };
+		B14F9EEE1B7E99720070E290 /* katya-kostyukova.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EE01B7E99720070E290 /* katya-kostyukova.jpg */; };
+		B14F9EEF1B7E99720070E290 /* drew-mcinnes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EE11B7E99720070E290 /* drew-mcinnes.jpg */; };
+		B14F9EF01B7E99720070E290 /* damien-mcdonald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EE21B7E99720070E290 /* damien-mcdonald.jpg */; };
+		B14F9EF11B7E99720070E290 /* bailey-busch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EE31B7E99720070E290 /* bailey-busch.jpg */; };
+		B14F9EFE1B7E999A0070E290 /* trent-mervine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF21B7E999A0070E290 /* trent-mervine.jpg */; };
+		B14F9EFF1B7E999A0070E290 /* sean-kregness.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF31B7E999A0070E290 /* sean-kregness.jpg */; };
+		B14F9F001B7E999A0070E290 /* remy-martin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF41B7E999A0070E290 /* remy-martin.jpg */; };
+		B14F9F011B7E999A0070E290 /* liana-dumitru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF51B7E999A0070E290 /* liana-dumitru.jpg */; };
+		B14F9F021B7E999A0070E290 /* francesca-chua.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF61B7E999A0070E290 /* francesca-chua.jpg */; };
+		B14F9F031B7E999A0070E290 /* tommy-engström.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF71B7E999A0070E290 /* tommy-engström.jpg */; };
+		B14F9F041B7E999A0070E290 /* stephanie-hsu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF81B7E999A0070E290 /* stephanie-hsu.jpg */; };
+		B14F9F051B7E999A0070E290 /* philip-chun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EF91B7E999A0070E290 /* philip-chun.jpg */; };
+		B14F9F061B7E999A0070E290 /* emmanuel-eleyae.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EFA1B7E999A0070E290 /* emmanuel-eleyae.jpg */; };
+		B14F9F071B7E999A0070E290 /* vanessa-wallis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EFB1B7E999A0070E290 /* vanessa-wallis.jpg */; };
+		B14F9F081B7E999A0070E290 /* derrick-huey.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EFC1B7E999A0070E290 /* derrick-huey.jpg */; };
+		B14F9F091B7E999A0070E290 /* matthew-goldwater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B14F9EFD1B7E999A0070E290 /* matthew-goldwater.jpg */; };
 		B15FBB521B72D446001CC68F /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FBB511B72D446001CC68F /* ContactListView.swift */; };
 		B15FBB541B72D5C1001CC68F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B15FBB531B72D5C1001CC68F /* ContactCell.swift */; };
 		B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */; };
@@ -89,22 +103,36 @@
 		B13902281B680EE3000C87BC /* TCPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCPalUITests.swift; sourceTree = "<group>"; };
 		B139022A1B680EE3000C87BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1428DA91B6AE69700BE1B6D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "derrick-huey.JPG"; sourceTree = "<group>"; };
-		B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "emmanuel-eleyae.JPG"; sourceTree = "<group>"; };
-		B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "francesca-chua.JPG"; sourceTree = "<group>"; };
-		B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "liana-dumitru.JPG"; sourceTree = "<group>"; };
-		B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "matthew-goldwater.JPG"; sourceTree = "<group>"; };
-		B144EF8F1B7D4532005E24EE /* philip-chun.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philip-chun.JPG"; sourceTree = "<group>"; };
-		B144EF901B7D4532005E24EE /* remy-martin.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "remy-martin.JPG"; sourceTree = "<group>"; };
-		B144EF911B7D4532005E24EE /* sean-kregness.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sean-kregness.JPG"; sourceTree = "<group>"; };
-		B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stephanie-hsu.JPG"; sourceTree = "<group>"; };
 		B144EF931B7D4532005E24EE /* tc-16.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-16.json"; sourceTree = "<group>"; };
 		B144EF941B7D4532005E24EE /* tc-17.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-17.json"; sourceTree = "<group>"; };
 		B144EF951B7D4532005E24EE /* tc-18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-18.json"; sourceTree = "<group>"; };
 		B144EF961B7D4532005E24EE /* tc-staff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-staff.json"; sourceTree = "<group>"; };
-		B144EF971B7D4532005E24EE /* tommy-engström.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tommy-engström.JPG"; sourceTree = "<group>"; };
-		B144EF981B7D4532005E24EE /* trent-mervine.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trent-mervine.JPG"; sourceTree = "<group>"; };
-		B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vanessa-wallis.JPG"; sourceTree = "<group>"; };
+		B14F9ED61B7E99720070E290 /* tc-19.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tc-19.json"; sourceTree = "<group>"; };
+		B14F9ED71B7E99720070E290 /* wade-warren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wade-warren.jpg"; sourceTree = "<group>"; };
+		B14F9ED81B7E99720070E290 /* yossi-goldlust.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yossi-goldlust.jpg"; sourceTree = "<group>"; };
+		B14F9ED91B7E99720070E290 /* tiffany-boccieri.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tiffany-boccieri.jpg"; sourceTree = "<group>"; };
+		B14F9EDA1B7E99720070E290 /* sarah-miller.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sarah-miller.jpg"; sourceTree = "<group>"; };
+		B14F9EDB1B7E99720070E290 /* simran-talreja.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "simran-talreja.jpg"; sourceTree = "<group>"; };
+		B14F9EDC1B7E99720070E290 /* nathan-sterner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nathan-sterner.jpg"; sourceTree = "<group>"; };
+		B14F9EDD1B7E99720070E290 /* kit-arafiles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kit-arafiles.jpg"; sourceTree = "<group>"; };
+		B14F9EDE1B7E99720070E290 /* mischelle-mulia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mischelle-mulia.jpg"; sourceTree = "<group>"; };
+		B14F9EDF1B7E99720070E290 /* jim-d'amico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jim-d'amico.jpg"; sourceTree = "<group>"; };
+		B14F9EE01B7E99720070E290 /* katya-kostyukova.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "katya-kostyukova.jpg"; sourceTree = "<group>"; };
+		B14F9EE11B7E99720070E290 /* drew-mcinnes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "drew-mcinnes.jpg"; sourceTree = "<group>"; };
+		B14F9EE21B7E99720070E290 /* damien-mcdonald.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "damien-mcdonald.jpg"; sourceTree = "<group>"; };
+		B14F9EE31B7E99720070E290 /* bailey-busch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bailey-busch.jpg"; sourceTree = "<group>"; };
+		B14F9EF21B7E999A0070E290 /* trent-mervine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "trent-mervine.jpg"; sourceTree = "<group>"; };
+		B14F9EF31B7E999A0070E290 /* sean-kregness.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sean-kregness.jpg"; sourceTree = "<group>"; };
+		B14F9EF41B7E999A0070E290 /* remy-martin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "remy-martin.jpg"; sourceTree = "<group>"; };
+		B14F9EF51B7E999A0070E290 /* liana-dumitru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "liana-dumitru.jpg"; sourceTree = "<group>"; };
+		B14F9EF61B7E999A0070E290 /* francesca-chua.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "francesca-chua.jpg"; sourceTree = "<group>"; };
+		B14F9EF71B7E999A0070E290 /* tommy-engström.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tommy-engström.jpg"; sourceTree = "<group>"; };
+		B14F9EF81B7E999A0070E290 /* stephanie-hsu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stephanie-hsu.jpg"; sourceTree = "<group>"; };
+		B14F9EF91B7E999A0070E290 /* philip-chun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "philip-chun.jpg"; sourceTree = "<group>"; };
+		B14F9EFA1B7E999A0070E290 /* emmanuel-eleyae.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "emmanuel-eleyae.jpg"; sourceTree = "<group>"; };
+		B14F9EFB1B7E999A0070E290 /* vanessa-wallis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vanessa-wallis.jpg"; sourceTree = "<group>"; };
+		B14F9EFC1B7E999A0070E290 /* derrick-huey.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "derrick-huey.jpg"; sourceTree = "<group>"; };
+		B14F9EFD1B7E999A0070E290 /* matthew-goldwater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "matthew-goldwater.jpg"; sourceTree = "<group>"; };
 		B15FBB511B72D446001CC68F /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		B15FBB531B72D5C1001CC68F /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -266,24 +294,54 @@
 		B144EF891B7D4532005E24EE /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
-				B144EF8A1B7D4532005E24EE /* derrick-huey.JPG */,
-				B144EF8B1B7D4532005E24EE /* emmanuel-eleyae.JPG */,
-				B144EF8C1B7D4532005E24EE /* francesca-chua.JPG */,
-				B144EF8D1B7D4532005E24EE /* liana-dumitru.JPG */,
-				B144EF8E1B7D4532005E24EE /* matthew-goldwater.JPG */,
-				B144EF8F1B7D4532005E24EE /* philip-chun.JPG */,
-				B144EF901B7D4532005E24EE /* remy-martin.JPG */,
-				B144EF911B7D4532005E24EE /* sean-kregness.JPG */,
-				B144EF921B7D4532005E24EE /* stephanie-hsu.JPG */,
-				B144EF931B7D4532005E24EE /* tc-16.json */,
+				B14F9ED51B7E996A0070E290 /* 19 */,
+				B14F9ED41B7E99570070E290 /* 18 */,
 				B144EF941B7D4532005E24EE /* tc-17.json */,
-				B144EF951B7D4532005E24EE /* tc-18.json */,
+				B144EF931B7D4532005E24EE /* tc-16.json */,
 				B144EF961B7D4532005E24EE /* tc-staff.json */,
-				B144EF971B7D4532005E24EE /* tommy-engström.JPG */,
-				B144EF981B7D4532005E24EE /* trent-mervine.JPG */,
-				B144EF991B7D4532005E24EE /* vanessa-wallis.JPG */,
 			);
 			path = "Sample Data";
+			sourceTree = "<group>";
+		};
+		B14F9ED41B7E99570070E290 /* 18 */ = {
+			isa = PBXGroup;
+			children = (
+				B144EF951B7D4532005E24EE /* tc-18.json */,
+				B14F9EFC1B7E999A0070E290 /* derrick-huey.jpg */,
+				B14F9EFA1B7E999A0070E290 /* emmanuel-eleyae.jpg */,
+				B14F9EF61B7E999A0070E290 /* francesca-chua.jpg */,
+				B14F9EF51B7E999A0070E290 /* liana-dumitru.jpg */,
+				B14F9EFD1B7E999A0070E290 /* matthew-goldwater.jpg */,
+				B14F9EF91B7E999A0070E290 /* philip-chun.jpg */,
+				B14F9EF41B7E999A0070E290 /* remy-martin.jpg */,
+				B14F9EF31B7E999A0070E290 /* sean-kregness.jpg */,
+				B14F9EF81B7E999A0070E290 /* stephanie-hsu.jpg */,
+				B14F9EF71B7E999A0070E290 /* tommy-engström.jpg */,
+				B14F9EF21B7E999A0070E290 /* trent-mervine.jpg */,
+				B14F9EFB1B7E999A0070E290 /* vanessa-wallis.jpg */,
+			);
+			name = 18;
+			sourceTree = "<group>";
+		};
+		B14F9ED51B7E996A0070E290 /* 19 */ = {
+			isa = PBXGroup;
+			children = (
+				B14F9ED61B7E99720070E290 /* tc-19.json */,
+				B14F9EE31B7E99720070E290 /* bailey-busch.jpg */,
+				B14F9EE21B7E99720070E290 /* damien-mcdonald.jpg */,
+				B14F9EE11B7E99720070E290 /* drew-mcinnes.jpg */,
+				B14F9EDF1B7E99720070E290 /* jim-d'amico.jpg */,
+				B14F9EE01B7E99720070E290 /* katya-kostyukova.jpg */,
+				B14F9EDD1B7E99720070E290 /* kit-arafiles.jpg */,
+				B14F9EDE1B7E99720070E290 /* mischelle-mulia.jpg */,
+				B14F9EDC1B7E99720070E290 /* nathan-sterner.jpg */,
+				B14F9EDA1B7E99720070E290 /* sarah-miller.jpg */,
+				B14F9EDB1B7E99720070E290 /* simran-talreja.jpg */,
+				B14F9ED91B7E99720070E290 /* tiffany-boccieri.jpg */,
+				B14F9ED71B7E99720070E290 /* wade-warren.jpg */,
+				B14F9ED81B7E99720070E290 /* yossi-goldlust.jpg */,
+			);
+			name = 19;
 			sourceTree = "<group>";
 		};
 		B1EA05221B7411BB00868BC2 /* Bingo */ = {
@@ -406,25 +464,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				B144EFA41B7D4532005E24EE /* tc-17.json in Resources */,
-				B144EF9B1B7D4532005E24EE /* emmanuel-eleyae.JPG in Resources */,
-				B144EFA71B7D4532005E24EE /* tommy-engström.JPG in Resources */,
+				B14F9EE51B7E99720070E290 /* wade-warren.jpg in Resources */,
+				B14F9EEC1B7E99720070E290 /* mischelle-mulia.jpg in Resources */,
+				B14F9EE81B7E99720070E290 /* sarah-miller.jpg in Resources */,
 				B144EFA31B7D4532005E24EE /* tc-16.json in Resources */,
-				B144EF9F1B7D4532005E24EE /* philip-chun.JPG in Resources */,
+				B14F9EF01B7E99720070E290 /* damien-mcdonald.jpg in Resources */,
+				B14F9F061B7E999A0070E290 /* emmanuel-eleyae.jpg in Resources */,
 				B13902131B680EE2000C87BC /* LaunchScreen.storyboard in Resources */,
-				B144EF9C1B7D4532005E24EE /* francesca-chua.JPG in Resources */,
-				B144EF9A1B7D4532005E24EE /* derrick-huey.JPG in Resources */,
-				B144EF9D1B7D4532005E24EE /* liana-dumitru.JPG in Resources */,
-				B144EFA81B7D4532005E24EE /* trent-mervine.JPG in Resources */,
 				B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */,
+				B14F9EE61B7E99720070E290 /* yossi-goldlust.jpg in Resources */,
 				B1183B291B71666C00A21C4D /* FaceGameIntroViewController.xib in Resources */,
-				B144EFA21B7D4532005E24EE /* stephanie-hsu.JPG in Resources */,
-				B144EF9E1B7D4532005E24EE /* matthew-goldwater.JPG in Resources */,
-				B144EFA01B7D4532005E24EE /* remy-martin.JPG in Resources */,
-				B144EFA91B7D4532005E24EE /* vanessa-wallis.JPG in Resources */,
-				B144EFA11B7D4532005E24EE /* sean-kregness.JPG in Resources */,
+				B14F9F071B7E999A0070E290 /* vanessa-wallis.jpg in Resources */,
+				B14F9F001B7E999A0070E290 /* remy-martin.jpg in Resources */,
+				B14F9EED1B7E99720070E290 /* jim-d'amico.jpg in Resources */,
+				B14F9F091B7E999A0070E290 /* matthew-goldwater.jpg in Resources */,
+				B14F9F031B7E999A0070E290 /* tommy-engström.jpg in Resources */,
 				B13902101B680EE2000C87BC /* Assets.xcassets in Resources */,
 				B144EFA61B7D4532005E24EE /* tc-staff.json in Resources */,
+				B14F9EF11B7E99720070E290 /* bailey-busch.jpg in Resources */,
+				B14F9EE71B7E99720070E290 /* tiffany-boccieri.jpg in Resources */,
+				B14F9F011B7E999A0070E290 /* liana-dumitru.jpg in Resources */,
+				B14F9EEB1B7E99720070E290 /* kit-arafiles.jpg in Resources */,
+				B14F9EEA1B7E99720070E290 /* nathan-sterner.jpg in Resources */,
+				B14F9EEF1B7E99720070E290 /* drew-mcinnes.jpg in Resources */,
+				B14F9EE91B7E99720070E290 /* simran-talreja.jpg in Resources */,
+				B14F9EFE1B7E999A0070E290 /* trent-mervine.jpg in Resources */,
 				B144EFA51B7D4532005E24EE /* tc-18.json in Resources */,
+				B14F9F021B7E999A0070E290 /* francesca-chua.jpg in Resources */,
+				B14F9F041B7E999A0070E290 /* stephanie-hsu.jpg in Resources */,
+				B14F9EEE1B7E99720070E290 /* katya-kostyukova.jpg in Resources */,
+				B14F9F051B7E999A0070E290 /* philip-chun.jpg in Resources */,
+				B14F9EFF1B7E999A0070E290 /* sean-kregness.jpg in Resources */,
+				B14F9F081B7E999A0070E290 /* derrick-huey.jpg in Resources */,
+				B14F9EE41B7E99720070E290 /* tc-19.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

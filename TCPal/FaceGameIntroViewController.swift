@@ -20,83 +20,58 @@ class FaceGameIntroViewController: UIViewController {
 	    fatalError("init(coder:) has not been implemented")
 	}
 
-	// MARK: - Model
-	var persons : [Person]!
+	// MARK: - View
 
-	// MARK: - Status Label/Buttons
-
-	@IBOutlet weak var retryButton: UIButton!
-	@IBOutlet weak var loadingLabel: UILabel!
-	@IBOutlet weak var playButton: UIButton!
-
-	@IBOutlet var statusViews: [UIView]!
-
-	func showStatusView(selectedView : UIView) {
-		for statusView in self.statusViews {
-			statusView.hidden = (statusView != selectedView)
-		}
-	}
-
-	// MARK: - View Lifecycle
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-
-		self.loadAllMaterials()
-	}
+	@IBOutlet weak var tc18button: UIButton!
+	@IBOutlet weak var tc19button: UIButton!
 
 	// MARK: - Actions
 
-	@IBAction func didTapRetry(sender: UIButton) {
-		self.loadAllMaterials()
-	}
-
 	@IBAction func didTapPlay(sender: UIButton) {
-		let gameVC = FaceGameViewController(persons: self.persons)
-		self.presentViewController(gameVC, animated: true, completion: nil)
+		let cohort : Int = {
+			switch (sender) {
+			case self.tc18button:
+				return 18
+			case self.tc19button:
+				return 19
+			default:
+				assert(false)
+			}
+		}()
+
+		self.loadAndPlay(cohort)
 	}
 
 	// MARK: - Data Marshaling
 
-	func loadAllMaterials() {
-		self.showStatusView(self.loadingLabel)
+	// Note: if we go back to loading materials from the internet, check the history for this file and pull in async code again :)
 
-		self.dynamicType.loadAllMaterials { (persons, error) -> Void in
-			if let _ = error {
-				// TODO: error messages?
-				let alert = UIAlertController(title: "A porblem!", message: nil, preferredStyle: .Alert)
-				alert.addAction(UIAlertAction(title: "Oh no!", style: .Cancel, handler: nil))
-				self.presentViewController(alert, animated: true, completion: nil)
-				self.showStatusView(self.retryButton)
-			} else if let persons = persons {
-				self.persons = persons
-				self.showStatusView(self.playButton)
-			} else {
-				self.showStatusView(self.retryButton)
-			}
+	func loadAndPlay(cohort: Int) {
+
+		let (maybePersons, maybeError) = FaceGameIntroViewController.loadMaterials(cohort)
+
+		guard let persons = maybePersons where maybeError == nil else {
+			// TODO: error messages?
+			let alert = UIAlertController(title: "A porblem!", message: nil, preferredStyle: .Alert)
+			alert.addAction(UIAlertAction(title: "Oh no!", style: .Cancel, handler: nil))
+			self.presentViewController(alert, animated: true, completion: nil)
+			return
 		}
+
+		let gameVC = FaceGameViewController(persons: persons)
+		self.presentViewController(gameVC, animated: true, completion: nil)
 	}
 
-	static func loadAllMaterials(completion: (persons:[Person]?, error:ErrorType?) -> Void) {
-		let sampleJSONURL = NSBundle.mainBundle().URLForResource("tc-18", withExtension: "json")!
+	static func loadMaterials(cohort: Int) -> (persons:[Person]?, error:ErrorType?) {
+
+		let sampleJSONURL = NSBundle.mainBundle().URLForResource("tc-\(cohort)", withExtension: "json")!
 		do {
 			let sampleJSON = try String(contentsOfURL: sampleJSONURL)
-			let persons = try Person.arrayFromJSON(sampleJSON, cohort:18)
-			Person.loadFaces(persons: persons, completion: { (success) -> Void in
-				// FIXME: Right now images are sourced from wherever, some links aren't even to images as such, so I guess partial failure is OK
-				let personsWithFaces = persons.filter({ (person) -> Bool in
-					person.face != nil
-				})
-
-				if (personsWithFaces.count >= 4) {
-					completion(persons: personsWithFaces, error: nil)
-				} else {
-					completion(persons: nil, error: nil)
-				}
-			})
-
+			let persons = try Person.arrayFromJSON(sampleJSON, cohort:cohort)
+			let personsWithFaces = persons.filter { $0.face != nil }
+			return (personsWithFaces, nil)
 		} catch let error { 
-			completion(persons: nil, error: error)
+			return (nil, error)
 		}
 
 	}

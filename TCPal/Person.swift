@@ -198,7 +198,7 @@ extension Person { // Networking helpers
 			let faceString = personDict["photoLink"]
 
 			// FIXME: This only should be here while we're using sample data. will gracefully return nil where we don't have photos
-			let face = UIImage(named: "\(givenName.lowercaseString)-\(familyName.lowercaseString).JPG")
+			let face = UIImage(named: "\(givenName.lowercaseString)-\(familyName.lowercaseString).jpg")
 
 			let faceURL = (faceString != nil) ? NSURL(string: faceString!) : nil
 
