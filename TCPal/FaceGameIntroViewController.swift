@@ -36,6 +36,7 @@ class FaceGameIntroViewController: UIViewController {
 				return 19
 			default:
 				assert(false)
+				return 0
 			}
 		}()
 
