@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			let tabBarController = UITabBarController()
 
 			tabBarController.viewControllers = [
-				TodayViewController(),
+				UINavigationController(rootViewController: TodayViewController()),
 				UINavigationController(rootViewController: ArchiveViewController()),
 				BingoBoardViewController(),
 				FaceGameIntroViewController(),

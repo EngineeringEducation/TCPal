@@ -4,8 +4,8 @@ fancy seeing you here!
 
 this is an iOS companion app for the tradecraft experience. it's pretty cool. so far its swanky features include:
 
-- stuff happening today ... uh ... or the idea of that
-- a data archive! also actually just an idea.
+- pretty basic announcements from the server
+- a data archive! mostly just an idea.
 - a symbol of helpfulness to design track.
 - a game for identifying faces. a "face game"
 - a contact list. tap on people to see... the people. (ios9 only)
