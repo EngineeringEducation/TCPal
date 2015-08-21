@@ -13,8 +13,7 @@ class ArchiveViewController: UITableViewController {
 	init() {
 		super.init(nibName: nil, bundle: nil)
 
-		self.tabBarItem = UITabBarItem(title: "Archive", image: nil, selectedImage: nil)
-		// For some reason the preceding line doesn't take effect through the navigation controller, so...
+		self.tabBarItem = UITabBarItem(title: "Archive", image: UIImage(named: "first"), selectedImage: nil)
 		self.title = "Archive"
 
 		self.navigationItem.title = "Learn more about..."

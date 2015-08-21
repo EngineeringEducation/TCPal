@@ -13,7 +13,7 @@ class BingoBoardViewController: UIViewController {
 	init() {
 		super.init(nibName: nil, bundle: nil)
 
-		self.tabBarItem = UITabBarItem(title: "Design Bingo", image: nil, selectedImage: nil)
+		self.tabBarItem = UITabBarItem(title: "Design Bingo", image: UIImage(named: "first"), selectedImage: nil)
 	}
 
 	required init?(coder aDecoder: NSCoder) {
