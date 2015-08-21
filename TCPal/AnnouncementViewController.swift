@@ -42,6 +42,12 @@ class AnnouncementViewController: UIViewController {
 	// MARK: - View Lifecycle
 
 	override func viewDidLoad() {
+		super.viewDidLoad()
+
+		self.textView.editable = false
+		self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+		self.textView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+
 		self.textView.text = "\(self.announcement.title)\n\n\(self.announcement.body)"
 	}
 }
