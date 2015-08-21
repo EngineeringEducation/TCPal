@@ -10,6 +10,12 @@
 
 import Foundation
 
+func + (left: NSAttributedString, right: NSAttributedString) -> NSAttributedString {
+	let theThing = NSMutableAttributedString(attributedString: left)
+	theThing.appendAttributedString(right)
+	return theThing
+}
+
 // Below adapted from http://stackoverflow.com/questions/24026510/how-do-i-shuffle-an-array-in-swift
 
 extension CollectionType where Index == Int {

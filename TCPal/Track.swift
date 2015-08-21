@@ -14,6 +14,21 @@ enum Track {
 	case ProductDesign
 	case Engineering
 
+	init?(APIToken : String) {
+		switch (APIToken) {
+		case "SALES":
+			self = .SalesBD
+		case "GROWTH":
+			self = .GrowthMarketing
+		case "DESIGN":
+			self = .ProductDesign
+		case "ENGINEERING":
+			self = .Engineering
+		default:
+			return nil
+		}
+	}
+
 	init?(name : String) {
 		switch (name) {
 		case "BD / Sales":
