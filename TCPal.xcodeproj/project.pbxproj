@@ -57,6 +57,7 @@
 		B173B7EF1B6AA3EB00EBE602 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B173B7EE1B6AA3EB00EBE602 /* GoogleService-Info.plist */; };
 		B17E36041B86A04B00E11087 /* Appeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E36031B86A04B00E11087 /* Appeal.swift */; };
 		B17E36061B86B26200E11087 /* AppealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E36051B86B26200E11087 /* AppealCell.swift */; };
+		B17E36081B86BBA900E11087 /* AppealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17E36071B86BBA900E11087 /* AppealViewController.swift */; };
 		B19695851B7D07F1003288B0 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19695841B7D07F1003288B0 /* ArchiveViewController.swift */; };
 		B1DA3E1A1B840AC00073E75A /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA3E191B840AC00073E75A /* Announcement.swift */; };
 		B1DA3E1C1B84F0750073E75A /* AnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA3E1B1B84F0750073E75A /* AnnouncementViewController.swift */; };
@@ -143,6 +144,7 @@
 		B173B7F01B6ABCD000EBE602 /* TCPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TCPal-Bridging-Header.h"; sourceTree = "<group>"; };
 		B17E36031B86A04B00E11087 /* Appeal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appeal.swift; sourceTree = "<group>"; };
 		B17E36051B86B26200E11087 /* AppealCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppealCell.swift; sourceTree = "<group>"; };
+		B17E36071B86BBA900E11087 /* AppealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppealViewController.swift; sourceTree = "<group>"; };
 		B19695841B7D07F1003288B0 /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		B1CC4DF468C3B7C9BC4DF0AE /* Pods-TCPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPal/Pods-TCPal.release.xcconfig"; sourceTree = "<group>"; };
 		B1DA3E191B840AC00073E75A /* Announcement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				B1183B331B71892B00A21C4D /* TodayViewController.swift */,
+				B17E36071B86BBA900E11087 /* AppealViewController.swift */,
 				B1DA3E1B1B84F0750073E75A /* AnnouncementViewController.swift */,
 				B1DA3E191B840AC00073E75A /* Announcement.swift */,
 				B17E36031B86A04B00E11087 /* Appeal.swift */,
@@ -598,6 +601,7 @@
 				B1DA3E1A1B840AC00073E75A /* Announcement.swift in Sources */,
 				B17E36041B86A04B00E11087 /* Appeal.swift in Sources */,
 				B1FA25F41B748F4E005131A8 /* BingoSquareView.swift in Sources */,
+				B17E36081B86BBA900E11087 /* AppealViewController.swift in Sources */,
 				B1183B281B71666C00A21C4D /* FaceGameIntroViewController.swift in Sources */,
 				B1183B311B71884C00A21C4D /* ContactListViewController.swift in Sources */,
 				B13902071B680EE2000C87BC /* AppDelegate.swift in Sources */,

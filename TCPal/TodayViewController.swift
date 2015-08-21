@@ -98,6 +98,8 @@ class TodayViewController: UITableViewController {
 
 				let cell = tableView.dequeueReusableCellWithIdentifier("appealCell", forIndexPath: indexPath)
 
+				cell.accessoryType = .DisclosureIndicator
+
 				cell.textLabel!.text = appeal.need
 				cell.detailTextLabel!.attributedText = appeal.subtitleAttributedText
 				cell.detailTextLabel!.alpha = 0.7
@@ -127,13 +129,12 @@ class TodayViewController: UITableViewController {
 		switch (indexPath.section) {
 		case 0:
 			let announcement = self.announcements[indexPath.row]
-
 			let announcementVC = AnnouncementViewController(announcement: announcement)
-
 			self.navigationController!.pushViewController(announcementVC, animated: true)
 		case 1:
-			// TODO: Implement AppealViewController
-			tableView.deselectRowAtIndexPath(indexPath, animated: true)
+			let appeal = self.appeals[indexPath.row]
+			let appealVC = AppealViewController(appeal: appeal)
+			self.navigationController!.pushViewController(appealVC, animated: true)
 		default:
 			assert(false)
 			return
